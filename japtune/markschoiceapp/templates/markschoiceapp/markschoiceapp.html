@@ -1,0 +1,57 @@
+{% load static %}
+<html langred !important;>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оберіть марку</title>
+    <link rel="stylesheet" href="{% static 'markschoiceapp/css/markschoiceapp.css' %}">
+    <!-- <script src="{% static 'japtuneapp/js/script.js' %}" defer></script> -->
+    <link rel="stylesheet" href="{% static 'japtuneapp/bootstrap-5.3.3-dist/css/bootstrap.css' %}">
+    <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
+</head>
+<body style="background-color: black;">
+    <header >
+        <div class="container">
+            <div id = "links" class="row">
+                <div class="col-1">
+                    <img src="{% static 'japtuneapp/img/logo.jpg' %}" alt="logo" class="header_logo" height="70 px">
+                </div>
+
+                <div class="col-3">
+                    <h1 id = "JapTuneCo" class="header_logo">JapTune Co.</h1>
+                </div>
+
+                <div class = 'col-3'>
+                    <a href="">Про нас</a>
+                </div>
+
+                <div class="col-3">
+                    <a href="">Зв'язок</a>
+                </div>
+
+                <div class="col-1 align-items-center">
+                    <img src="{% static 'japtuneapp/img/imgregistration.png' %}" alt="" height="50px">
+                </div>
+
+                <div class="col-1">
+                    <a href="{% url 'registration' %}">Реєстрація</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id = "select">
+            <h1>Оберіть марку машини:</h1>
+        </div>
+        <div>
+            <a href=""><img src="" alt="mazda"> </a>
+            <a href=""><img src="" alt="subaru"> </a>
+            <a href=""><img src="" alt="toyota"> </a>
+            </div>
+        <div>
+            <a href=""><img src="" alt="nissan"> </a>
+            <a href=""><img src="" alt="honda"> </a>
+        </div>
+    </main>
+</body>
+</html>

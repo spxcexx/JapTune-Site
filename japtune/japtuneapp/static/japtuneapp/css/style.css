@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    /* padding-top: 5px; */
+    display: flex;
+    background-color: black;
+    align-items: center;
+    height: 80px;
+    color: white;
+}
+
+/* .header_logo{
+    margin-left: 100%;
+} */
+
+/* #registration{
+    right: 5%;
+} */
+
+header a{
+    padding-top: 10px;
+    display: flex;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    align-items: center;
+    justify-content: center;
+
+
+}
+header img{
+    padding-left: 50%;
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+/* #links{
+    display: flex;
+    justify-content: space-between;
+    left: 95px;
+} */
+
+body main h1 {
+    display: flex;
+    size: 100px;
+
+}
+
+.main-but{
+    display: flex;
+    justify-content: space-around;
+}
+
+body main{
+    font-weight: bold;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.text_in_main_page{
+    color: white;
+}
+
+#bg{
+    background: url('{% static "japtuneapp/img/bg.jpg" %}') center, center/over, no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.button{
+    border-radius: 20px;
+    width: 300px;
+    height: 80px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    font-size: 20px;
+    transition: all 0.3s ease;
+
+}
+
+
+.button:hover {
+    transition: all 0.1s ease-in;
+    border: 1px solid rgb(2, 102, 220);
+    font-weight: 500;
+}
+
+.button:active {
+    transition: all 0.1s;
+    transform: scale(0.9);
+}
+
+main div {
+    margin: 20px;
+}
+
+#JapTuneCo{
+    display: flex;
+    font-size: 40px;
+    align-items: center;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+#header_left_side{
+    width: 90%;
+}
+
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    border-top: 0.1em solid;
+    border-color: white ;
+}
+#footer_1{
+    display: grid;
+    width: 35%
+}
+
+#footer_2{
+    display: grid;
+    width: 30%;
+}
+
+.logofooter{
+    height:50px;
+    width: 50px;
+}
+
+/* .logofooterclass{
+    /* width:20%; */
+
+.logoandtext{
+    height: 50%;
+    width: 15%;
+}
+
+
+footer div a {
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    font-weight: 600;
+
+}
+
+footer div a:hover {
+    color: rgb(2, 102, 220);
+    transition: all 0.3s ease;
+}
+
+footer #footer_1 {
+    width: 315px;
+}
+
+body header .burger_menu_links .container #rows #col3 .row a:hover {
+    color: rgb(2, 102, 220);
+    transition: all 0.3s ease;
+}
+body header .burger_menu_links .container #rows #col4 .row a:hover {
+    color: rgb(2, 102, 220);
+    transition: all 0.3s ease;
+}
+body header .burger_menu_links .container #rows .col-4 .row a:hover {
+    color: rgb(2, 102, 220);
+    transition: all 0.3s ease;
+}
+body header .burger_menu_links a:hover {
+    color: rgb(2, 102, 220);
+    transition: all 0.3s ease;
+}
+
+.logofooterclass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+#ig{
+    width: 65px;
+    height: 65px;
+}
+#yt{
+    width: 65px;
+    height: 65px;
+}
+
+body header .burger_menu_links .container #row1 .col a:hover {
+    color: rgb(2, 102, 220);
+    transition: all 0.3s ease;
+}
+
+body header .burger_menu_links .container #rows .col-3 a img {
+    width: 50px;
+}
+
+body header .burger_menu_links .container #rows {
+    align-items: center;
+    justify-content: center;
+}
+
+body footer .logofooterclass a img {
+    width: 50px;
+}
+
+body main #buttons .main-but .button {
+    text-decoration: none;
+}

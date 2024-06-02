@@ -1,0 +1,86 @@
+main  {
+    background-color: rgb(1, 1, 1);
+}
+body main div {
+    display: grid;
+
+}
+.error-text{
+    color: rgb(91, 91, 91);
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+    width: 270px;
+    flex-wrap: wrap;
+}
+
+#popup {
+    opacity: 0;
+<<<<<<< HEAD
+    width: 400px;
+=======
+<<<<<<< HEAD
+    width: 400px;
+=======
+    width: 600px;
+>>>>>>> f2d6ec91c87b6f48c18d834ac828892addf4bcd5
+>>>>>>> 8f9a7c3b4b150a33c9fc5be181a3016896773aa9
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    background-color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition:opacity 0.5s;
+    text-align: center;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8f9a7c3b4b150a33c9fc5be181a3016896773aa9
+    justify-content: center
+
+}
+
+#popup.active {
+    opacity: 1;
+    justify-content: center
+<<<<<<< HEAD
+=======
+=======
+
+}
+
+#popup.show {
+    opacity: 1;
+
+>>>>>>> f2d6ec91c87b6f48c18d834ac828892addf4bcd5
+>>>>>>> 8f9a7c3b4b150a33c9fc5be181a3016896773aa9
+}
+
+#bg{
+    transition:all 0.5s;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    background-color: black;
+}
+
+<<<<<<< HEAD
+#bg.active {
+=======
+<<<<<<< HEAD
+#bg.active {
+=======
+#bg.show {
+>>>>>>> f2d6ec91c87b6f48c18d834ac828892addf4bcd5
+>>>>>>> 8f9a7c3b4b150a33c9fc5be181a3016896773aa9
+    opacity: 50%;
+    visibility:visible ;
+}
