@@ -11,6 +11,24 @@
 </head>
 <body>
     <style>
+        @font-face {
+            font-family: "K2D Thin";
+            src: url("{% static 'japtuneapp/fonts/K2D-Thin.ttf' %}") format("opentype");
+          }
+        @font-face {
+            font-family: "K2D Bold";
+            src: url("{% static 'japtuneapp/fonts/K2D-Bold.ttf' %}") format("opentype");
+          }
+        *{
+            font-family: "K2D Thin", sans-serif;
+        }
+        header a{
+            font-weight: lighter;
+        }
+        #enter{
+            font-family: K2D Thin, sans-serif;
+            font-weight: bold;
+        }
 
         body{
             background: url('{% static "japtuneapp/img/bg.jpg" %}');
@@ -45,7 +63,7 @@
                     {% if user.is_authenticated %}
                         <a style="text-align: center; font-size: 30px; padding-top: 13px;" href="{% url 'logout_user' %}">{{ user.username }}</a>
                     {% else %}
-                        <a href="{% url 'login' %}">Увійти</a>
+                        <a id="enter" href="{% url 'login' %}">Увійти</a>
                     {% endif %}
                 </div>
             </div>
@@ -79,7 +97,7 @@
 
             <div class="row align-items-center row-gap-1">
                 <div class="col main-but">
-                    <button class="button">Переглянути наші роботи</button>
+                    <button class="button">Наші роботи</button>
                 </div>
             </div>
 

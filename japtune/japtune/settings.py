@@ -41,6 +41,11 @@ INSTALLED_APPS = [
     'partnersapp',
     'registrationapp',
     'markschoiceapp',
+    'honda',
+    'mazda',
+    'nissan',
+    'subaru',
+    'toyota'
 
 ]
 

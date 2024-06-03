@@ -1,16 +1,21 @@
+
+
+
 *{
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 header{
-    /* padding-top: 5px; */
+    padding-right: 100px;
     display: flex;
     background-color: black;
     align-items: center;
     height: 80px;
     color: white;
+
 }
 
 /* .header_logo{
@@ -27,7 +32,6 @@ header a{
     font-size: 30px;
     color: white;
     text-decoration: none;
-    font-weight: 300;
     align-items: center;
     justify-content: center;
 
@@ -41,6 +45,9 @@ header img{
     justify-content: center;
 
 
+}
+#header_left_side{
+    width: 90%;
 }
 
 /* #links{
@@ -116,9 +123,7 @@ main div {
     margin-left: 10%;
     margin-top: 5%;
 }
-#header_left_side{
-    width: 90%;
-}
+
 
 footer{
     background-color: black;

@@ -20,6 +20,12 @@ from japtuneapp.views import main
 from partnersapp.views import partners
 from registrationapp.views import registration, login_user, logout_user
 from markschoiceapp.views import *
+from subaru.views import subaru_view
+from honda.views import honda_view
+from mazda.views import mazda_view
+from nissan.views import nissan_view
+from toyota.views import toyota_view
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main, name='main'),
@@ -28,5 +34,9 @@ urlpatterns = [
     path('login/', login_user, name="login"),
     path('logout/', logout_user, name="logout_user"),
     path('choice/', main_choice, name='choice'),
-
+    path('subaru/', subaru_view, name='subaru'),
+    path('honda/', honda_view, name='honda'),
+    path('mazda/', mazda_view, name='mazda'),
+    path('nissan/', nissan_view, name='nissan'),
+    path('toyota', toyota_view, name='toyota'),
 ]
