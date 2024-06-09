@@ -1,15 +1,14 @@
+{% extends 'japtuneapp/base.html' %}
+{% block content %}
 {% load static %}
-<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Головна</title>
-    <link rel="stylesheet" href="{% static 'japtuneapp/css/style.css' %}">
-    <script src="{% static 'japtuneapp/js/script.js' %}" defer></script>
-    <link rel="stylesheet" href="{% static 'japtuneapp/bootstrap-5.3.3-dist/css/bootstrap.css' %}">
-    <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
+
 </head>
+
 <body>
+
     <style>
 
         body{
@@ -18,11 +17,13 @@
             background-repeat: no-repeat;
         }
     </style>
-    <header >
+
+
+    {% comment %} <header >
         <div class="container">
             <div id = "links" class="row">
                 <div class="col-1">
-                    <img src="{% static 'japtuneapp/img/logo.jpg' %}" alt="logo" class="header_logo" height="70 px">
+                    <img src="{% static 'japtuneapp/img/logo.jpg' %}" alt="logo" class="header_logo" height="50 px" style="padding: 0px; margin: 0px;">
                 </div>
 
                 <div class="col-3">
@@ -50,7 +51,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    </header> {% endcomment %}
 
     <main>
         <div class="container p-2">
@@ -79,13 +80,13 @@
 
             <div class="row align-items-center row-gap-1">
                 <div class="col main-but">
-                    <button class="button">Переглянути наші роботи</button>
+                    <a class="button" href="{% url 'our_works' %}" style="text-decoration: none; text-align: center; padding-top: 22px;">Наші роботи</a>
                 </div>
             </div>
 
         </div>
     </main>
-    <footer>
+    {% comment %} <footer>
         <img src="{% static 'japtuneapp/img/logofooter.png' %}" alt="logoandtext" class="logoandtext">
         <div class = "logofooterclass">
             <a href="https://www.facebook.com/profile.php?id=61560198481722"><img src="{% static 'japtuneapp/img/facebookfooter.png' %}" alt=""></a>
@@ -104,7 +105,9 @@
             <a href="">Зв'язок з нами</a>
             <a href="">Гаряча лінія</a>
         </div>
-    </footer>
+    </footer> {% endcomment %}
 </body>
+
 </html>
+{% endblock %}
 

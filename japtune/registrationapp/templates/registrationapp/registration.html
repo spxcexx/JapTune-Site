@@ -1,3 +1,5 @@
+{% extends 'japtuneapp/base.html' %}
+{% block content %}
 {% load static %}
 <html lang="en">
 <head>
@@ -10,26 +12,11 @@
     <link rel="stylesheet" href="{% static 'japtuneapp/bootstrap-5.3.3-dist/css/bootstrap.css' %}">
     <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
 </head>
-<body style="background-color: black;">
-    <header>
-        <div class="container">
-            <div class="row align-items-center" style="color: white;">
-                <div class="col" style="padding: 2px; padding-left: 150px;">
-                    <h1 style="text-align: end;">JapTune Co.</h1>
-                </div>
-                <div class="col" style="padding: 2px;">
-                    <img src="{% static 'japtuneapp/img/logo.jpg' %}" alt="logo" height="70 px">
-                </div>
+<body style="background-color: 2c2c2c;">
 
-            </div>
-            <div class="row align-items-center" style="color: white;">
-                <h2 style="text-align: center;">Реєстрація</h2>
-
-            </div>
-        </div>
-    </header>
     <main>
         <div class="container align-items-center justify-content-center">
+            <h1 id="page_name">Реєстрація</h1>
             <form action="" method="POST">
                 {% csrf_token %}
                 <div class="row">
@@ -51,10 +38,7 @@
                     <input type="password" placeholder="Підтвердження паролю" name="password_confirm" required>
                 </div>
                 <div class="row">
-                    <button class="btn btn-secondary">Зареєструватися</button>
-                </div>
-                <div class="row">
-                    <p class="error-text">{{text_error}}</p>
+                    <button class="btn btn-secondary" id="reg_btn">Зареєструватися</button>
                 </div>
             </form>
 
@@ -83,7 +67,28 @@
 
                 </script>
             {% endif %}
+            {% comment %} <footer>
+                            <img src="{% static 'japtuneapp/img/logofooter.png' %}" alt="logoandtext" class="logoandtext">
+                            <div class = "logofooterclass">
+                                <a href="https://www.facebook.com/profile.php?id=61560198481722"><img src="{% static 'japtuneapp/img/facebookfooter.png' %}" alt=""></a>
+                                <a href="https://www.youtube.com/channel/UCltZrRPvTu0EuzPTxusPzWg"><img src="{% static 'japtuneapp/img/youtubefooter.png' %}" alt=""></a>
+                                <a href="https://www.instagram.com/japtun3/"><img src="{% static 'japtuneapp/img/instafooter.png' %}" alt=""></a>
+                                <a href="https://x.com/JapTune"><img src="{% static 'japtuneapp/img/twitterfooter.png' %}" alt=""></a>
+                                <a href="https://www.linkedin.com/in/japtune-corp-93b45b310/"><img src="{% static 'japtuneapp/img/linkedinfooter.png' %}" alt=""></a>
+                            </div>
+                            <div id = "footer_1">
+                                <a href="">Екскурсії</a>
+                                <a href="">Шукаємо спеціалістів</a>
+                                <a href="">Наші роботи</a>
+                            </div>
+                            <div id = "footer_2">
+                                <a href="">Наша адреса</a>
+                                <a href="">Зв'язок з нами</a>
+                                <a href="">Гаряча лінія</a>
+                            </div>
+                        </footer> {% endcomment %}
         </div>
     </main>
 </body>
+{% endblock %}
 </html>

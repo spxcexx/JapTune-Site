@@ -1,0 +1,52 @@
+{% extends 'japtuneapp/base.html' %}
+{% block content %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зв'язок з нами</title>
+    <link rel="stylesheet" href="{% static 'contact_us/css/style.css' %}">
+    <script src="{% static 'contact_us/js/script.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'japtuneapp/bootstrap-5.3.3-dist/css/bootstrap.css' %}">
+    <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
+</head>
+<body>
+
+    <main style="background-color: 2c2c2c; height: 641px;">
+        <div class="container align-items-center justify-content-center">
+            <h1 style="color: white;">Зв'язок з нами</h1>
+            <div class="form">
+                <form action="#" method="POST">
+                    {% csrf_token %}
+                    <input type="text" placeholder="Ваше ім'я">
+                    <input type="email" placeholder="Ваша ел. пошта">
+                    <textarea name="textarea" id="" placeholder="Ваш текст"></textarea>
+                    <button class="btn btn-secondary">Надіслати</button>
+                </form>
+            </div>
+        </div>
+    </main>
+            {% comment %} <footer>
+                            <img src="{% static 'japtuneapp/img/logofooter.png' %}" alt="logoandtext" class="logoandtext">
+                            <div class = "logofooterclass">
+                                <a href="https://www.facebook.com/profile.php?id=61560198481722"><img src="{% static 'japtuneapp/img/facebookfooter.png' %}" alt=""></a>
+                                <a href="https://www.youtube.com/channel/UCltZrRPvTu0EuzPTxusPzWg"><img src="{% static 'japtuneapp/img/youtubefooter.png' %}" alt=""></a>
+                                <a href="https://www.instagram.com/japtun3/"><img src="{% static 'japtuneapp/img/instafooter.png' %}" alt=""></a>
+                                <a href="https://x.com/JapTune"><img src="{% static 'japtuneapp/img/twitterfooter.png' %}" alt=""></a>
+                                <a href="https://www.linkedin.com/in/japtune-corp-93b45b310/"><img src="{% static 'japtuneapp/img/linkedinfooter.png' %}" alt=""></a>
+                            </div>
+                            <div id = "footer_1">
+                                <a href="">Екскурсії</a>
+                                <a href="">Шукаємо спеціалістів</a>
+                                <a href="">Наші роботи</a>
+                            </div>
+                            <div id = "footer_2">
+                                <a href="">Наша адреса</a>
+                                <a href="">Зв'язок з нами</a>
+                                <a href="">Гаряча лінія</a>
+                            </div>
+                        </footer> {% endcomment %}
+</body>
+{% endblock %}
+</html>

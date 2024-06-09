@@ -1,0 +1,77 @@
+{% extends 'japtuneapp/base.html' %}
+{% block content %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наші роботи</title>
+    <link rel="stylesheet" href="{% static 'japtuneapp/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'our_works/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'japtuneapp/bootstrap-5.3.3-dist/css/bootstrap.css' %}">
+    <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
+    <script src="{% static 'japtuneapp/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js' %}" defer></script>
+</head>
+<body style="color: 2c2c2c; background-color: 2c2c2c;">
+
+      <div class="container">
+
+          <div id="carouselExample" class="carousel slide">
+              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  </div>
+                  <div class="carousel-inner" style="right: 27px;">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                      <img src="{% static 'our_works/img/Slice 1.png' %}" class="d-block w-100" alt="..." style="opacity: 65%;">
+                      <div class="carousel-caption d-none d-md-block">
+                          <h5>Кожна з цих машин зроблена з найякісніших матеріалів наших партнерів, ми допоможемо вам підібрати найкращу машину на ваш смак!</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                      <img src="{% static 'our_works/img/Slice 2.png' %}" class="d-block w-100" alt="..." style="opacity: 65%;">
+                      <div class="carousel-caption d-none d-md-block">
+                          <h5>Кожна з цих машин зроблена з найякісніших матеріалів наших партнерів, ми допоможемо вам підібрати найкращу машину на ваш смак!</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                      <img src="{% static 'our_works/img/Slice 3.png' %}" class="d-block w-100" alt="..." style="opacity: 65%;">
+                      <div class="carousel-caption d-none d-md-block">
+                          <h5>Кожна з цих машин зроблена з найякісніших матеріалів наших партнерів, ми допоможемо вам підібрати найкращу машину на ваш смак!</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                      <img src="{% static 'our_works/img/Slice 4.png' %}" class="d-block w-100" alt="..." style="opacity: 65%;">
+                      <div class="carousel-caption d-none d-md-block">
+                          <h5>Кожна з цих машин зроблена з найякісніших матеріалів наших партнерів, ми допоможемо вам підібрати найкращу машину на ваш смак!</h5>
+                        </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+
+
+
+                  <div class="main-but">
+                      <a class="button" href="{% url 'choice' %}" style="text-decoration: none; text-align: center; padding-top: 22px;">Стокові машини</a>
+                      <a class="button" href="{% url 'choice' %}" style="text-decoration: none; text-align: center; padding-top: 22px;">Тюнінговані машини</a>
+                  </div>
+
+
+      </div>
+
+
+</body>
+{% endblock %}
+</html>

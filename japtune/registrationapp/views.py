@@ -20,7 +20,7 @@ def registration(request):
                 print("Спроба створити юзера")
                 User.objects.create_user(first_name=first_name, last_name=last_name ,email=email, username=username, password=password)
                 print("Користувача створено")
-                return redirect('main')
+                return redirect('login_user')
             except IntegrityError:
                 print("Користувач існує")
                 text_error = "Такий користувач вже існує"
@@ -47,7 +47,7 @@ def login_user(request):
         if user is not None:
             print("Користувача знайдено")
             login(request, user)
-            return redirect("main")
+            return redirect("successful_login")
         else:
             print("Користувача не знайдено")
             text_error = "Такого користувача не знайдено"
@@ -62,4 +62,4 @@ def show_successful_login(request):
 
 def logout_user(request):
     logout(request)
-    return redirect("main")
+    return redirect("show_login")

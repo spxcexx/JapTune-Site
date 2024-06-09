@@ -41,7 +41,13 @@ INSTALLED_APPS = [
     'partnersapp',
     'registrationapp',
     'markschoiceapp',
-
+    'honda',
+    'mazda',
+    'subaru',
+    'nissan',
+    'toyota',
+    'our_works',
+    'contact_us',
 ]
 
 MIDDLEWARE = [

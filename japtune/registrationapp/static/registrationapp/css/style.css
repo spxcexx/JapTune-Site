@@ -1,6 +1,24 @@
 main  {
-    background-color: rgb(1, 1, 1);
+    background-color: 2c2c2c;
+    height: 100%;
 }
+
+/* header{
+    background-color: 2c2c2c;
+
+} */
+
+body{
+
+    background-color: 2c2c2c;
+
+}
+
+#page_name{
+    justify-content: center;
+    align-items: center;
+}
+
 body main div {
     display: grid;
 
@@ -16,15 +34,7 @@ body main div {
 
 #popup {
     opacity: 0;
-<<<<<<< HEAD
     width: 400px;
-=======
-<<<<<<< HEAD
-    width: 400px;
-=======
-    width: 600px;
->>>>>>> f2d6ec91c87b6f48c18d834ac828892addf4bcd5
->>>>>>> 8f9a7c3b4b150a33c9fc5be181a3016896773aa9
     border: 1px black solid;
     border-radius: 10px;
     padding: 10px;
@@ -36,10 +46,6 @@ body main div {
     transform: translate(-50%, -50%);
     transition:opacity 0.5s;
     text-align: center;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8f9a7c3b4b150a33c9fc5be181a3016896773aa9
     justify-content: center
 
 }
@@ -47,17 +53,6 @@ body main div {
 #popup.active {
     opacity: 1;
     justify-content: center
-<<<<<<< HEAD
-=======
-=======
-
-}
-
-#popup.show {
-    opacity: 1;
-
->>>>>>> f2d6ec91c87b6f48c18d834ac828892addf4bcd5
->>>>>>> 8f9a7c3b4b150a33c9fc5be181a3016896773aa9
 }
 
 #bg{
@@ -72,15 +67,7 @@ body main div {
     background-color: black;
 }
 
-<<<<<<< HEAD
 #bg.active {
-=======
-<<<<<<< HEAD
-#bg.active {
-=======
-#bg.show {
->>>>>>> f2d6ec91c87b6f48c18d834ac828892addf4bcd5
->>>>>>> 8f9a7c3b4b150a33c9fc5be181a3016896773aa9
     opacity: 50%;
     visibility:visible ;
 }
