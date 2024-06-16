@@ -3,4 +3,5 @@ from django.shortcuts import render
 # Create your views here.
 
 def mazda_view(request):
-    return render(request, 'mazda/mazda.html')
+    return render(request, 'mazda/index.html')
+

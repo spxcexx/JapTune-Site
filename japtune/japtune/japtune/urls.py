@@ -18,13 +18,19 @@ from django.contrib import admin
 from django.urls import path
 from japtuneapp.views import main
 from partnersapp.views import partners
-from registrationapp.views import registration, login_user, logout_user, show_successful_login
+from registrationapp.views import registration, login_user, logout_user
 from markschoiceapp.views import *
-from toyota.views import toyota_view
 from subaru.views import subaru_view
-from nissan.views import nissan_view
-from mazda.views import mazda_view
 from honda.views import honda_view
+from mazda.views import mazda_view
+from nissan.views import nissan_view
+from toyota.views import toyota_view
+from about_us.views import about_us_view
+from contact_us.views import contact_us_view
+from excursions.views import excursions_view
+from our_address.views import our_address_view
+from our_works.views import our_works_view
+from vacancies.views import vacancies_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,10 +40,16 @@ urlpatterns = [
     path('login/', login_user, name="login"),
     path('logout/', logout_user, name="logout_user"),
     path('choice/', main_choice, name='choice'),
-    path('successful_login/', show_successful_login, name='successful_login'),
-    path('toyota/', toyota_view, name = "toyota"),
-    path('subaru/', subaru_view, name = "subaru"),
-    path('nissan/', nissan_view, name = "nissan"),
-    path('mazda/', mazda_view, name = "mazda"),
-    path('honda/', honda_view, name = "honda"),
+    path('subaru/', subaru_view, name='subaru'),
+    path('honda/', honda_view, name='honda'),
+    path('mazda/', mazda_view, name='mazda'),
+    path('nissan/', nissan_view, name='nissan'),
+    path('toyota/', toyota_view, name='toyota'),
+    path('about_us/', about_us_view, name = 'about_us'),
+    path('contact_us/', contact_us_view, name = 'contact_us'),
+    path('excursions/', excursions_view, name = 'excursions'),
+    path('our_address/', our_address_view, name = 'our_address'),
+    path('our_works/', our_works_view, name = 'our_works'),
+    path('vacancies/', vacancies_view, name = 'vacancies'),
+
 ]

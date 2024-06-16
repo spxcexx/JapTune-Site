@@ -43,9 +43,10 @@ INSTALLED_APPS = [
     'markschoiceapp',
     'honda',
     'mazda',
-    'subaru',
     'nissan',
-    'toyota',
+    'subaru',
+    'toyota'
+
 ]
 
 MIDDLEWARE = [

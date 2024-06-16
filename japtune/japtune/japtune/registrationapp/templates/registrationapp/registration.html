@@ -1,0 +1,98 @@
+{% extends 'japtuneapp/base.html' %}
+{% block content %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <link rel="stylesheet" href="{% static 'registrationapp/css/style.css' %}">
+    <script src="{% static 'registrationapp/js/script.js' %}" defer></script>
+    <script src="{% static 'registrationapp/js/jQuery.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'japtuneapp/bootstrap-5.3.3-dist/css/bootstrap.css' %}">
+    <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
+</head>
+<body style="background-color: 2c2c2c;">
+
+    <main>
+        <div class="container justify-content-center">
+            <div class="row m-auto">
+                <h1 >Реєстрація</h1>
+            </div>
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="row">
+                    <input type="text" placeholder="Ваше ім'я" name="name" required>
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="Ваше прізвище" name="surname" required>
+                </div>
+                <div class="row">
+                    <input type="email" placeholder="Ваша ел. пошта" name="email" required>
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="Ім'я вашого акаунту" name="username" required>
+                </div>
+                <div class="row">
+                    <input type="password" placeholder="Пароль" name="password" required>
+                </div>
+                <div class="row">
+                    <input type="password" placeholder="Підтвердження паролю" name="password_confirm" required>
+                </div>
+                <div class="row">
+                    <button class="btn btn-secondary" id="reg_btn">Зареєструватися</button>
+                </div>
+            </form>
+
+            {% if text_error != None %}
+                <div id="bg"  style="margin: 0px;"></div>
+                <div id="popup" style="text-align: center;">
+                    <p class="error-text">{{text_error}}</p>
+                </div>
+                <!-- <button id="open-button">Модальне вікно</button> -->
+                <script>
+                    // const errorText = "{{text_error|escapejs}}";
+                    const regBtn = document.querySelector("#reg_btn");
+                    const popup = document.querySelector('#popup');
+                    const bg = document.querySelector("#bg");
+
+
+                    popup.classList.toggle('active')
+                    bg.classList.toggle('active')
+
+
+                    bg.addEventListener('click', function(){
+                        popup.classList.toggle('active')
+                        bg.classList.toggle('active')
+                    });
+
+
+                </script>
+            {% endif %}
+            {% comment %}
+    <footer>
+        <img src="{% static 'japtuneapp/img/logofooter.png' %}" alt="logoandtext" class="logoandtext">
+        <div class = "logofooterclass">
+            <a href="https://www.facebook.com/profile.php?id=61560198481722"><img src="{% static 'japtuneapp/img/facebookfooter.png' %}" alt=""></a>
+            <a href="https://www.youtube.com/channel/UCltZrRPvTu0EuzPTxusPzWg"><img src="{% static 'japtuneapp/img/youtubefooter.png' %}" alt=""></a>
+            <a href="https://www.instagram.com/japtun3/"><img src="{% static 'japtuneapp/img/instafooter.png' %}" alt=""></a>
+            <a href="https://x.com/JapTune"><img src="{% static 'japtuneapp/img/twitterfooter.png' %}" alt=""></a>
+            <a href="https://www.linkedin.com/in/japtune-corp-93b45b310/"><img src="{% static 'japtuneapp/img/linkedinfooter.png' %}" alt=""></a>
+        </div>
+        <div id = "footer_1">
+            <a href="">Екскурсії</a>
+            <a href="">Шукаємо спеціалістів</a>
+            <a href="">Наші роботи</a>
+        </div>
+        <div id = "footer_2">
+            <a href="">Наша адреса</a>
+            <a href="">Зв'язок з нами</a>
+            <a href="">Гаряча лінія</a>
+        </div>
+    </footer> {% endcomment %}
+        </div>
+    </main>
+</body>
+{% endblock %}
+</html>
