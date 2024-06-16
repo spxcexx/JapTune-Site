@@ -1,0 +1,27 @@
+{% extends 'japtuneapp/base.html' %}
+{% block content %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Екскурсії</title>
+    <link rel="stylesheet" href="{% static 'registrationapp/css/style.css' %}">
+    <script src="{% static 'registrationapp/js/script.js' %}" defer></script>
+    <script src="{% static 'registrationapp/js/jQuery.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'japtuneapp/bootstrap-5.3.3-dist/css/bootstrap.css' %}">
+    <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
+</head>
+<body style="background-color: 2c2c2c;">
+    <main>
+        <h1>Записатись на екскурсію</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Надіслати</button>
+        </form>
+    </main>
+</body>
+{% endblock %}
+</html>

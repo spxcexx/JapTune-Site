@@ -1,0 +1,43 @@
+
+
+body{
+    background-color: 2C2C2C;
+}
+
+.maintop {
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.hondalogo {
+    max-width: 100px;
+    margin-right: 20px;
+}
+.car1 {
+    max-width: 1000px;
+    background-color: #BCBCBC;
+    border-radius: 10px;
+    padding: 35px;
+}
+.carimage {
+    width: 50%;
+    max-width: 400px;
+    margin-right: 20px;
+}
+.info1 {
+    text-align: center;
+}
+.textinfo1 {
+    margin-bottom: 10px;
+}
+.cartop {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.info2 {
+    margin-left: 20px;
+}
+

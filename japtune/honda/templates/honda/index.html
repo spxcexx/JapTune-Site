@@ -1,0 +1,46 @@
+{% extends 'japtuneapp/base.html' %}
+{% block content %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'honda/css/style.css' %}">
+    <script src="{% static 'japtuneapp/js/script.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'honda/bootstrap-5.3.3-dist/css/bootstrap.css' %}">
+    <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
+    <title>Honda</title>
+</head>
+<body style="background-color: 2c2c2c;">
+    <main>
+        <div class="maintop">
+            <img src="{% static 'markschoiceapp/img/honda.png' %}" alt="hondalogo" class="hondalogo">
+            <h1>Машини Honda</h1>
+        </div>
+        <div class="cars">
+            <div class="car1">
+                <div class="cartop">
+                    <img src="{% static 'honda/img/honda1.jpg' %}" alt="car" class="carimage">
+                    <div class="info1">
+                        <h1>Honda NSX</h1>
+                        <p class="textinfo1">Ціна: 140.000</p>
+                        <p class="textinfo1">Вага: 1689 кг</p>
+                        <p class="textinfo1">Потужність: 414 к.с.</p>
+                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btncheck1">✓ З тюнінгом</label>
+                        </div>
+                        <button type="button" class="btn btn-primary"><a href="{% url 'detailsNSX' %}">Детальніше</a></button>
+                    </div>
+                </div>
+                <div class="info2">
+                    <p>Пробіг: 53.429 км</p>
+                    <p>Двигун: C30A</p>
+                    <p>Тип палива: Бензин</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+{% endblock %}
+</html>
