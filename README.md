@@ -4,10 +4,19 @@
 
 # Швидка карта по файлу README.md
 - [Учасники проєкту](#учасники-проєкту)
-- [Figma проєкт](#section2)
-- [Сторінки](#section3)
-- [Технології](#section4)
-- [Моделі](#section5)
+- [Figma проєкт](#figma-проєкт)
+- [Сторінки](#сторінки)
+- [Технології](#технології)
+- [Моделі](#моделі)
+  - [Brand](#brand)
+  - [CarModel](#carmodel)
+  - [CarVariant](#carvariant)
+- [Функції відображення](#функції-відображення)
+  - [main](#main)
+  - [registration](#registration)
+  - [login_user](#login_user)
+  - [show_successfull_login](#show_successful_login)
+  - [logout_user](#logout_user)
 
 ## Учасники проєкту
 
@@ -23,10 +32,10 @@
 4. **Ярослав Єрмаков / Yaroslav Ermakov** (Full Stack Developer)
    - GitHub профіль: https://github.com/ZenPickk
 
-## <a name="section2"></a>Figma проєкт
+## Figma проєкт
    - https://www.figma.com/design/Vi09s9VDNOCxzVR8TT3KbQ/Untitled?node-id=0-1&t=ROwet0lwuOx6WUSf-1
 
-## <a name="section3"></a>Сторінки
+## Сторінки
 
 - **Головна**: Основна сторінка з інформацією про нашу корпорвцію та пропозиції.
 - **Про нас**: Сторінка з описом наших послуг та можливостей.
@@ -38,7 +47,7 @@
 - **Сторінки з марками**: Окрема сторінка для 5 марок автомобілів, які ми продаємо.
 - **Сторінки докладніше**: Детальні сторінки для кожної машини (5 сторінок для кожної марки).
 
-## <a name="section4"></a>Технології
+## Технології
 
 - HTML (HyperText Markup Language)
   - HTML використовується для створення структури і вмісту веб-сторінок. Він визначає елементи, такі як заголовки, абзаци, зображення і посилання.
@@ -123,4 +132,119 @@ class CarVariant(models.Model):
 
 (Поле **image** було створено після проведення міграцій, тому має атрибути **null=True** та **blank=True**)
 
-###
+## Функції відображення
+
+### main
+
+Функція відображення головної сторінки
+
+```python
+
+def main(request):
+    return render(request, 'japtuneapp/index.html')
+
+```
+- Оператор def у мові програмування Python - виконує створення функції, куди ми повинні передати назву функції та її аргументи, у нашому випадку аргумент **request** - це запит на веб-сторінку на яку хоче потрапити користувач, і якщо запит без помилок - виконується код внутри функції, де **return** - повертає користувачу сторінку в HTML вигляді, за відображення сторінки відповідає рядок **render(request, 'japtune/index.html')** де **request** - це і є запит користувача який він надсилав, а **'japtune/index.html'** - це шлях до файлу, який буде повернутий користувачу.
+
+### registration
+
+Функція для реєстрації нового користувача
+
+```python
+def registration(request):
+    if request.method == "POST":
+        first_name = request.POST.get("name")
+        last_name = request.POST.get("surname")
+        email = request.POST.get("email")
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+        password_confirm = request.POST.get("password_confirm")
+        text_error = None
+        print(f"Ім'я: {first_name}; Фамілія {last_name}; Email: {email}; Юзернейм: {username}; Пароль: {password}; Підтв. пароля:{password_confirm}")
+        if password == password_confirm:
+            try:
+                print("Спроба створити юзера")
+                User.objects.create_user(first_name=first_name, last_name=last_name ,email=email, username=username, password=password)
+                print("Користувача створено")
+                return redirect('login_user')
+            except IntegrityError:
+                print("Користувач існує")
+                text_error = "Такий користувач вже існує"
+                return render(request, "registrationapp/registration.html", context={"text_error" : text_error})
+        elif password != password_confirm:
+            text_error = "Паролі не збігаються"
+            return render(request, "registrationapp/registration.html", context={"text_error" : text_error})
+
+        else:
+            text_error = "Помилка"
+            return render(request, "registrationapp/registration.html", context={"text_error" : text_error})
+
+    return render(request, 'registrationapp/registration.html')
+```
+
+- Функція приймає запит користувача як аргумент (request).
+- Якщо метод запиту `POST`, функція витягує дані з форми (ім'я, прізвище, електронну пошту, ім'я користувача, пароль, підтвердження пароля).
+- Перевіряється, чи збігаються паролі. Якщо так, функція намагається створити нового користувача.
+- Якщо користувача успішно створено, виконується перенаправлення на сторінку входу. У разі помилки (наприклад, якщо користувач вже існує), повертається сторінка реєстрації з повідомленням про помилку.
+- Якщо метод запиту не `POST`, повертається сторінка реєстрації.
+
+### login_user
+
+Функція для входу користувача
+
+```python
+def login_user(request):
+    if request.method == "POST":
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+        text_error = None
+        print(f"Аунтифікація користувача. Юзернейм: {username}; Пароль: {password}")
+        user = authenticate(request, username=username, password=password)
+        print("Користувач аунтифікувався. Перевірка у базі данних")
+        if user is not None:
+            print("Користувача знайдено")
+            login(request, user)
+            return redirect("successful_login")
+        else:
+            print("Користувача не знайдено")
+            text_error = "Такого користувача не знайдено"
+            return render(request, "registrationapp/autorization.html", context={"text_error" : text_error})
+    return render(request, 'registrationapp/autorization.html')
+```
+
+- Функція приймає запит користувача як аргумент **(request)**.
+- Якщо метод запиту `POST`, функція витягує дані з форми (ім'я користувача, пароль).
+- Виконується спроба аутентифікації користувача за допомогою функції `authenticate`.
+- Якщо користувач існує та аутентифікація успішна, виконується вхід користувача і перенаправлення на сторінку успішного входу.
+- Якщо користувача не знайдено, повертається сторінка авторизації з повідомленням про помилку.
+- Якщо метод запиту не `POST`, повертається сторінка авторизації.
+
+### show_successful_login
+
+Функція для відображення сторінки успішного входу
+
+```python
+def show_successful_login(request):
+    if request.user.is_authenticated:
+        return render(request, "japtuneapp/index.html")
+    else:
+        return redirect("login_user")
+```
+
+- Функція приймає запит користувача як аргумент **(request)**.
+- Якщо користувач аутентифікований, повертається основна сторінка.
+- Якщо користувач не аутентифікований, виконується перенаправлення на сторінку входу.
+
+### logout_user
+
+Функція для виходу користувача
+
+```python
+def logout_user(request):
+    logout(request)
+    return redirect("login")
+```
+
+- Функція приймає запит користувача як аргумент **(request)**.
+- Виконується вихід користувача за допомогою функції `logout`.
+- Після виходу виконується перенаправлення на сторінку входу.
