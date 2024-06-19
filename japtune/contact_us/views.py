@@ -15,7 +15,7 @@ def contact_us_view(request):
 
             send_mail(
                 subject=f'Нове повідомлення від {name}',
-                message=message,
+                message=f'Ел. пошта відправника: {email} \n Текст повідомлення: {message}',
                 from_email=email,
                 recipient_list=['dimasnovikov330@gmail.com'],
                 fail_silently=False,

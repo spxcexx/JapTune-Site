@@ -5,7 +5,6 @@
 }
 
 header{
-    /* padding-top: 15px; */
     display: flex;
     background-color: black;
     align-items: center;
@@ -14,12 +13,6 @@ header{
     border-bottom: 0.1em solid;
     border-color: white ;
 }
-
-
-
-/* #registration{
-    right: 5%;
-} */
 
 header a{
     display: flex;
@@ -40,8 +33,6 @@ body header div a:hover{
 }
 
 header img{
-
-    /* padding-top: 15%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,17 +40,9 @@ header img{
 
 }
 
-
-/* #links{
-    display: flex;
-    justify-content: space-between;
-    left: 95px;
-} */
-
 body main h1 {
     display: flex;
     size: 100px;
-
 }
 
 .main-but{
@@ -74,7 +57,6 @@ body main{
     color: white;
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
 }
 
 .text_in_main_page{
@@ -116,6 +98,10 @@ main div {
     margin: 20px;
 }
 
+#carousel{
+    margin-right: 75px;
+}
+
 #JapTuneCo{
     display: flex;
     font-size: 40px;
@@ -150,21 +136,16 @@ footer{
     width: 50px;
 }
 
-/* .logofooterclass{
-    /* width:20%; */
-
 .logoandtext{
     height: 50%;
     width: 15%;
 }
-
 
 footer div a {
     text-decoration: none;
     color: white;
     font-size: larger;
     font-weight: 600;
-
 }
 
 footer div a:hover {
@@ -206,6 +187,10 @@ body header .burger_menu_links a:hover {
 #yt{
     width: 65px;
     height: 65px;
+}
+
+#texth1{
+    justify-content: center;
 }
 
 body header .burger_menu_links .container #row1 .col a:hover {

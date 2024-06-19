@@ -19,7 +19,7 @@ from django.urls import path
 from japtuneapp.views import main
 from partnersapp.views import partners
 from registrationapp.views import registration, login_user, logout_user
-from markschoiceapp.views import *
+from markschoiceapp.views import main_choice
 from subaru.views import subaru_view
 from honda.views import honda_view
 from mazda.views import mazda_view

@@ -1,12 +1,83 @@
+{% extends 'japtuneapp/base.html' %}
+{% block content %}
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вакансії</title>
+    <link rel="stylesheet" href="{% static 'vacancies/css/style.css' %}">
+    <script src="{% static 'registrationapp/js/script.js' %}" defer></script>
+    <script src="{% static 'registrationapp/js/jQuery.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'japtuneapp/bootstrap-5.3.3-dist/css/bootstrap.css' %}">
+    <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
 </head>
-<body>
-    <main>
-        
+<body style="background-color: 2c2c2c;">
+    <main class="container my-5" style="background-color: 2c2c2c;">
+        <h2 class="text-center mb-4">Вакансії</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4" id = "card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Назва роботи</h5>
+                        <p class="card-text">Зарплата</p>
+                        <p class="card-text">Опис роботи / вимоги / переваги</p>
+                        <a href="#" class="btn btn-primary">Відгукнутися</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id = "card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Назва роботи</h5>
+                        <p class="card-text">Зарплата</p>
+                        <p class="card-text">Опис роботи / вимоги / переваги</p>
+                        <a href="#" class="btn btn-primary">Відгукнутися</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id = "card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Назва роботи</h5>
+                        <p class="card-text">Зарплата</p>
+                        <p class="card-text">Опис роботи / вимоги / переваги</p>
+                        <a href="#" class="btn btn-primary">Відгукнутися</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id = "card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Назва роботи</h5>
+                        <p class="card-text">Зарплата</p>
+                        <p class="card-text">Опис роботи / вимоги / переваги</p>
+                        <a href="#" class="btn btn-primary">Відгукнутися</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id = "card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Назва роботи</h5>
+                        <p class="card-text">Зарплата</p>
+                        <p class="card-text">Опис роботи / вимоги / переваги</p>
+                        <a href="#" class="btn btn-primary">Відгукнутися</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id = "card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Назва роботи</h5>
+                        <p class="card-text">Зарплата</p>
+                        <p class="card-text">Опис роботи / вимоги / переваги</p>
+                        <a href="#" class="btn btn-primary">Відгукнутися</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
+{% endblock %}
 </html>
