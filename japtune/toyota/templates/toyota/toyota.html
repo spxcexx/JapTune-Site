@@ -1,28 +1,77 @@
+{% extends 'japtuneapp/base.html' %}
+{% block content %}
 {% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Машини Honda</title>
-    <link rel="stylesheet" href="{% static 'japtuneapp/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'honda/css/style.css' %}">
     <script src="{% static 'japtuneapp/js/script.js' %}" defer></script>
-    <link rel="stylesheet" href="{% static 'japtuneapp/bootstrap-5.3.3-dist/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'honda/bootstrap-5.3.3-dist/css/bootstrap.css' %}">
     <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
+    <title>Mazda</title>
 </head>
-<body>
-    <main>
-        <div class = "card">
-            <img src="" class="card-img-top" alt="car img">
-            <div class="card-body">
-                <h5 class="card-title"></h5>
-                <p class="card-text"></p>
-                <p class="card-text"></p>
-                <p class="card-text"></p>
-                <p class="card-text"></p>
-                <a href="" class="btn btn-primary"></a>
+<body style="background-color: #2C2C2C;">
+    <main class="d-flex flex-column align-items-center justify-content-center min-vh-100">
+        <div class="maintop text-center">
+            <img src="{% static 'markschoiceapp/img/toyota.png' %}" alt="hondalogo" class="hondalogo mb-3">
+            <h1 style="color: white; opacity: 83%;">Машини Toyota</h1>
+        </div>
+        <div class="cars">
+            <div class="car1 card text-white mb-3" style="width: 1370px; height: 550px; background-color: #DEDEDE;">
+                <div class="cartop card-header d-flex justify-content-between align-items-center" style="background-color: #DEDEDE;">
+                    <img src="{% static 'honda/img/honda1.jpg' %}" alt="car" class="carimage mb-3" style="width: 100%; height: auto;">
+                    <div class="info1 text-center" style="flex: 1; margin-left: 15px;">
+                        <h5 class="card-title" style="color: black;">Toyota Supra A80</h5>
+                        <p class="textinfo1" style="color: black;">Ціна: 68.000 €</p>
+                        <p class="textinfo1" style="color: black;">Вага: 1550 кг.</p>
+                        <p class="textinfo1" style="color: black;">Потужність: 302 к.с.</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="btncheck1">
+                            <label class="form-check-label" for="btncheck1" style="color: black;">З тюнінгом</label>
+                        </div>
+                        <div class="mt-3">
+                            <button type="button" class="btn btn-primary w-100">
+                                <a href="{% url 'detailsSupra' %}" style="text-decoration: none; color: white;">Детальніше</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="info2 card-body text-start">
+                    <p style="color: black;">Пробіг: 83.000 км</p>
+                    <p style="color: black;">Двигун: SR20DET</p>
+                    <p style="color: black;">Тип палива: бензин</p>
+                </div>
+            </div>
+        </div>
+        <div class="cars">
+            <div class="car1 card text-white mb-3" style="width: 1370px; height: 550px; background-color: #DEDEDE;">
+                <div class="cartop card-header d-flex justify-content-between align-items-center" style="background-color: #DEDEDE;">
+                    <img src="{% static 'honda/img/honda2.jpg' %}" alt="car" class="carimage mb-3" style="width: 100%; height: auto; ">
+                    <div class="info1 text-center" style="flex: 1; margin-left: 15px;">
+                        <h5 class="card-title" style="color: black; font-weight: bold;">Toyota AE86 Trueno</h5>
+                        <p class="textinfo1" style="color: black;">Ціна: 15.000 €</p>
+                        <p class="textinfo1" style="color: black;">Вага: 870 кг</p>
+                        <p class="textinfo1" style="color: black;">Потужність: 122 к.с.</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="btncheck2">
+                            <label class="form-check-label" for="btncheck2" style="color: black;">З тюнінгом</label>
+                        </div>
+                        <div class="mt-3">
+                            <button type="button" class="btn btn-primary w-100">
+                                <a href="{% url 'detailsTrueno' %}" style="text-decoration: none; color: white;">Детальніше</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="info2 card-body text-start">
+                    <p style="color: black;">Пробіг: 117.231 км</p>
+                    <p style="color: black;">Двигун: 1600cc 4A-GE</p>
+                    <p style="color: black;">Тип палива: бензин</p>
+                </div>
             </div>
         </div>
     </main>
 </body>
+{% endblock %}
 </html>
-

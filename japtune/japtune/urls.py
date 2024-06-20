@@ -20,11 +20,11 @@ from japtuneapp.views import main
 from partnersapp.views import partners
 from registrationapp.views import registration, login_user, logout_user, show_successful_login
 from markschoiceapp.views import main_choice
-from toyota.views import toyota_view
-from subaru.views import subaru_view
-from nissan.views import nissan_view
-from mazda.views import mazda_view
-from honda.views import honda_view, detailsNSX_view
+from toyota.views import *
+from subaru.views import *
+from nissan.views import *
+from mazda.views import *
+from honda.views import *
 from about_us.views import about_us_view
 from contact_us.views import contact_us_view, success_view
 from excursions.views import excursions_view, success_excursions_view
@@ -46,7 +46,6 @@ urlpatterns = [
     path('nissan/', nissan_view, name = "nissan"),
     path('mazda/', mazda_view, name = "mazda"),
     path('honda/', honda_view, name = "honda"),
-    path('detailsNSX/', detailsNSX_view, name = "detailsNSX"),
     path('about_us/', about_us_view, name = 'about_us'),
     path('contact_us/', contact_us_view, name = 'contact_us'),
     path('excursions/', excursions_view, name = 'excursions'),
@@ -55,4 +54,10 @@ urlpatterns = [
     path('vacancies/', vacancies_view, name = 'vacancies'),
     path('success/', success_view, name='success'),
     path('success_excursion/', success_excursions_view, name = 'success_excursion'),
+    path('detailsIntegra/', detailsIntegra_view, name = 'detailsIntegra'),
+    path('detailsSkyline/', detailsSkyline_view, name = 'detailsSkyline'),
+    path('detailsSilvia/', detailsSilvia_view, name = 'detailsSilvia'),
+    path('detailsNSX/', detailsNSX_view, name = "detailsNSX"),
+    path('detailsSupra', detailsSupra_view, name = "detailsSupra"),
+    path('detailsTrueno', detailsTrueno_view, name = "detailsTrueno"),
 ]

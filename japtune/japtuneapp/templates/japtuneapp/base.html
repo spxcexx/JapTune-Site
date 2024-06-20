@@ -10,38 +10,37 @@
     <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
 </head>
 <body>
-
-    <header >
+    <header style="height: 65px;">
         <div class="container">
             <div id = "links" class="row">
                 <div class="col-1">
-                    <img src="{% static 'japtuneapp/img/logo.jpg' %}" alt="logo" class="header_logo" height="70 px">
+                    <img src="{% static 'japtuneapp/img/logo.jpg' %}" alt="logo" class="header_logo" height="55 px" style="margin-right: 100px;">
                 </div>
 
                 <div class="col-3 link">
-                    <a href="{% url 'main' %}" id = "JapTuneCo" class="header_logo">JapTune Co.</a>
+                    <a href="{% url 'main' %}" id = "JapTuneCo" class="header_logo" style="font-size: 32; margin-right: 120px;">JapTune Co.</a>
                 </div>
 
-                <div class = 'col-2 link'>
-                    <a href="{% url 'about_us' %}">Про нас</a>
+                <div class = 'col-2 mt-2 link'>
+                    <a href="{% url 'about_us' %}" style="font-size: 24;">Про нас</a>
                 </div>
 
-                <div class="col-2 link">
-                    <a href="{% url 'contact_us' %}">Зв'язок</a>
+                <div class="col-2 mt-2 link">
+                    <a href="{% url 'contact_us' %}" style="font-size: 24;">Зв'язок</a>
                 </div>
-                <div class="col-2 link">
-                    <a href="{% url 'vacancies' %}">Вакансії</a>
-                </div>
-
-                <div class="col-1 align-items-center">
-                    <img src="{% static 'japtuneapp/img/imgregistration.png' %}" id="login_img" alt="" height="50px">
+                <div class="col-2 mt-2 link">
+                    <a href="{% url 'vacancies' %}" style="font-size: 24;">Вакансії</a>
                 </div>
 
-                <div class="col-1">
+                <div class="col-1 mt-2 align-items-center">
+                    <img src="{% static 'japtuneapp/img/imgregistration.png' %}" id="login_img" alt="" height="40px">
+                </div>
+
+                <div class="col-1 mt-2 " >
                     {% if user.is_authenticated %}
-                        <a style="text-align: center; font-size: 30px; padding-top: 13px;" href="{% url 'logout_user' %}">{{ user.username }}</a>
+                        <a style="text-align: center; font-size: 30px; padding-top: 13px; font-size: 24;" href="{% url 'logout_user' %}">{{ user.username }}</a>
                     {% else %}
-                        <a href="{% url 'login' %}">Увійти</a>
+                        <a href="{% url 'login' %}" style="margin-right:100px; font-size: 24;">Увійти</a>
                     {% endif %}
                 </div>
             </div>
@@ -64,6 +63,7 @@
             <a href="{% url 'our_works' %}">Наші роботи</a>
         </div>
         <div id = "footer_2">
+            <a href="{% url 'partners' %}">Наші партнери</a>
             <a href="{% url 'our_address' %}">Наша адреса</a>
             <a href="{% url 'contact_us' %}">Зв'язок з нами</a>
         </div>
