@@ -8,8 +8,12 @@
     <script src="{% static 'japtuneapp/js/script.js' %}" defer></script>
     <link rel="stylesheet" href="{% static 'honda/bootstrap-5.3.3-dist/css/bootstrap.css' %}">
     <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
-    <title>Mazda</title>
+    <title>Nissan</title>
     <style>
+        *{
+            color: black;
+        }
+
         body {
             background-color: #2c2c2c;
             font-family: Arial, sans-serif;
@@ -73,84 +77,60 @@
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="car-card">
-        <div class="image-container">
-            <img src="{% static 'nissan/img/skyline.png' %}" alt="Nissan SkyLine R34" class="img-fluid">
-            <div class="additional-info">
-                <p>Пробіг: 120.347 км</p>
-                <p>Двигун: RB26DETT</p>
-                <p>Тип палива: бензин</p>
-            </div>
-        </div>
-        <div class="car-details">
-            <h3>Nissan SkyLine R34</h3>
-            <p>Ціна: 50.000 €</p>
-            <p>Вага: 1530 кг</p>
-            <p>Потужність: 200 к.с.</p>
-            <div class="checkbox-container">
-                <input type="checkbox" id="tuning">
-                <label for="tuning">З тюнінгом</label>
-            </div>
-            <button class="btn-details">
-                <a href="{% url 'detailsSkyline' %}">Детальніше</a>
-            </button>
-        </div>
+    <div class="maintop text-center">
+        <img src="{% static 'markschoiceapp/img/nissan.png' %}" alt="hondalogo" class="hondalogo mb-3">
+        <h1 style="color: white; opacity: 83%;">Машини Nissan</h1>
     </div>
-</div>
-<div class="container">
-    <div class="car-card">
-        <div class="image-container">
-            <img src="{% static 'nissan/img/silvia.png' %}" alt="Nissan SkyLine R34" class="img-fluid">
-            <div class="additional-info">
-                <p>Пробіг: 120.347 км</p>
-                <p>Двигун: RB26DETT</p>
-                <p>Тип палива: бензин</p>
-            </div>
-        </div>
-        <div class="car-details">
-            <h3>Nissan Silvia S15</h3>
-            <p>Ціна: 38.000 €</p>
-            <p>Вага: 1316 кг</p>
-            <p>Потужність: 195 к.с.</p>
-            <div class="checkbox-container">
-                <input type="checkbox" id="tuning">
-                <label for="tuning">З тюнінгом</label>
-            </div>
-            <button class="btn-details">
-                <a href="{% url 'detailsSilvia' %}">Детальніше</a>
-            </button>
-        </div>
-    </div>
-</div>
-        <!-- <div class="cars">
-            <div class="car1 card text-white mb-3" style="width: 1370px; height: 550px; background-color: #DEDEDE;">
-                <div class="cartop card-header d-flex justify-content-between align-items-center" style="background-color: #DEDEDE;">
-                    <img src="{% static 'nissan/img/silvia.png' %}" alt="car" class="carimage mb-3" style="width: 100%; height: auto; ">
-                    <div class="info1 text-center" style="flex: 1; margin-left: 15px;">
-                        <h5 class="card-title" style="color: black;">Nissan Silvia S15</h5>
-                        <p class="textinfo1" style="color: black;">Ціна: 38.000 €</p>
-                        <p class="textinfo1" style="color: black;">Вага: 1316 кг</p>
-                        <p class="textinfo1" style="color: black;">Потужність: 195 к.с.</p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="btncheck2">
-                            <label class="form-check-label" for="btncheck2" style="color: black;">З тюнінгом</label>
-                        </div>
-                        <div class="mt-3">
-                            <button type="button" class="btn btn-primary w-100">
-                                <a href="{% url 'detailsSilvia' %}" style="text-decoration: none; color: white;">Детальніше</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="info2 card-body text-start">
-                    <p style="color: black;">Пробіг: 83 км</p>
-                    <p style="color: black;">Двигун: SR20DET</p>
-                    <p style="color: black;">Тип палива: бензин</p>
+    <div class="container">
+        <div class="car-card">
+            <div class="image-container">
+                <img src="{% static 'nissan/img/skyline.png' %}" alt="Nissan SkyLine R34" class="img-fluid">
+                <div class="additional-info">
+                    <p>Пробіг: 120.347 км</p>
+                    <p>Двигун: RB26DETT</p>
+                    <p>Тип палива: бензин</p>
                 </div>
             </div>
-        </div> -->
-    </main>
+            <div class="car-details">
+                <h3>Nissan SkyLine R34</h3>
+                <p>Ціна: 50.000 €</p>
+                <p>Вага: 1530 кг</p>
+                <p>Потужність: 200 к.с.</p>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="tuning">
+                    <label for="tuning">З тюнінгом</label>
+                </div>
+                <button class="btn-details">
+                    <a href="{% url 'detailsSkyline' %}">Детальніше</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="car-card">
+            <div class="image-container">
+                <img src="{% static 'nissan/img/silvia.png' %}" alt="Nissan SkyLine R34" class="img-fluid">
+                <div class="additional-info">
+                    <p>Пробіг: 120.347 км</p>
+                    <p>Двигун: RB26DETT</p>
+                    <p>Тип палива: бензин</p>
+                </div>
+            </div>
+            <div class="car-details">
+                <h3>Nissan Silvia S15</h3>
+                <p>Ціна: 38.000 €</p>
+                <p>Вага: 1316 кг</p>
+                <p>Потужність: 195 к.с.</p>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="tuning">
+                    <label for="tuning">З тюнінгом</label>
+                </div>
+                <button class="btn-details">
+                    <a href="{% url 'detailsSilvia' %}">Детальніше</a>
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 {% endblock %}
 </html>

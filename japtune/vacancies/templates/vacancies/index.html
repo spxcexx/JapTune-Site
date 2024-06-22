@@ -13,71 +13,82 @@
     <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
 </head>
 <body style="background-color: 2c2c2c;">
-    <main class="container my-5" style="background-color: 2c2c2c;">
-        <h2 class="text-center mb-4">Вакансії</h2>
+
+  <div class="main_div container my-5" style="background-color: 2c2c2c;">
         <div class="row">
-            <div class="col-md-4 mb-4" id = "card">
+            <h2 class="text-center mb-5" id="vacancies-name">Вакансії</h2>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col" id = "card">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Назва роботи</h5>
-                        <p class="card-text">Зарплата</p>
-                        <p class="card-text">Опис роботи / вимоги / переваги</p>
+                        <h5 class="card-title" style="font-size: 25px;">Автомеханік</h5>
+                        <p class="card-text" style="font-size: 20px; font-weight: bolder;">20 000 – 30 000 грн</p>
+                        <p class="card-text">Повна зайнятість. Також готові взяти студента.
+                            Вимоги: Досвід роботи авто механіком від 1 року Знання основ діагностики та ремонту автомобілів Вміння працювати з діагностичним обладнанням</p>
                         <a href="#" class="btn btn-primary">Відгукнутися</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4" id = "card">
+            <div class="col" id = "card">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Назва роботи</h5>
-                        <p class="card-text">Зарплата</p>
-                        <p class="card-text">Опис роботи / вимоги / переваги</p>
-                        <a href="#" class="btn btn-primary">Відгукнутися</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4" id = "card">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Назва роботи</h5>
-                        <p class="card-text">Зарплата</p>
-                        <p class="card-text">Опис роботи / вимоги / переваги</p>
-                        <a href="#" class="btn btn-primary">Відгукнутися</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4" id = "card">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Назва роботи</h5>
-                        <p class="card-text">Зарплата</p>
-                        <p class="card-text">Опис роботи / вимоги / переваги</p>
-                        <a href="#" class="btn btn-primary">Відгукнутися</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4" id = "card">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Назва роботи</h5>
-                        <p class="card-text">Зарплата</p>
-                        <p class="card-text">Опис роботи / вимоги / переваги</p>
-                        <a href="#" class="btn btn-primary">Відгукнутися</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4" id = "card">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Назва роботи</h5>
-                        <p class="card-text">Зарплата</p>
-                        <p class="card-text">Опис роботи / вимоги / переваги</p>
+                        <h5 class="card-title" style="font-size: 25px;">Адміністратор</h5>
+                        <p class="card-text" style="font-size: 20px; font-weight: bolder;">10 000 – 15 000 грн</p>
+                        <p class="card-text">Повна зайнятість. Також готові взяти студента. Вимоги: Комунікабельність та вміння працювати в колективі; Відповідальність та організованість; Бажання навчатися та розвиватися.</p>
                         <a href="#" class="btn btn-primary">Відгукнутися</a>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+        <div class="row mb-4">
+            <div class="col" id = "card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 25px;">Шиномонтажник</h5>
+                        <p class="card-text" style="font-size: 20px; font-weight: bolder;">14 000 – 30 000 грн</p>
+                        <p class="card-text">Повна зайнятість. Вимоги: Досвід на роботи на вантажному та легковому шиномонтажі, вміння робити ремонт покришок, вміння користування шиномонтажним обладнанням.</p>
+                        <a href="#" class="btn btn-primary">Відгукнутися</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id = "card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 25px;">Помічник автомеханіка</h5>
+                        <p class="card-text" style="font-size: 20px; font-weight: bolder;">8 000 – 12 000 грн</p>
+                        <p class="card-text">Повна зайнятість. Також готові взяти студента, інваліда, ветерана. Без досвіду. Вимоги: Бажання навчатись професії Відповідальність Базові знання пристрою</p>
+                        <a href="#" class="btn btn-primary">Відгукнутися</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col" id = "card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 25px;">Прибиральник</h5>
+                        <p class="card-text" style="font-size: 20px; font-weight: bolder;">6 000 – 9 000 грн</p>
+                        <p class="card-text">Повна зайнятість. Досвід роботи від 1 року. Умови роботи: Позмінний графік Забезпечення всім необхідним для роботи. Обов’язки: Якісне прибирання ремонтної зони</p>
+                        <a href="#" class="btn btn-primary">Відгукнутися</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id = "card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 25px;">Менеджер з постачання</h5>
+                        <p class="card-text" style="font-size: 20px; font-weight: bolder;">20 000 – 25 000 грн</p>
+                        <p class="card-text">Повна зайнятість. Досвід роботи від 1 року. Вимоги: Вміння активно просувати продукцію та проводити переговори з клієнтами Висока комунікабельність та навички роботи з клієнтами.</p>
+                        <a href="#" class="btn btn-primary">Відгукнутися</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 {% endblock %}
 </html>

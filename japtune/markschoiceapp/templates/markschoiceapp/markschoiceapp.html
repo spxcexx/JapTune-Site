@@ -16,12 +16,12 @@
 <body style="background-color: 2c2c2c;">
 
     <main>
-        <div class="main">
+        <div class="main justify-content-center">
             <div id = "select">
                 <h1>Оберіть марку машини:</h1>
             </div>
-            <div id="div1">
-                <a href="{% url 'mazda' %}" id = "mazda"><img class="img" src="{% static 'markschoiceapp/img/mazda.png' %}" alt="mazda"> </a>
+            <div id="div1" style="margin-left: 50px;">
+                <a href="{% url 'mazda' %}" id = "mazda" style="width: 350px;"><img class="img" src="{% static 'markschoiceapp/img/mazda.png' %}" alt="mazda"> </a>
                 <a href="{% url 'subaru' %}" id = "subaru"><img class="img" src="{% static 'markschoiceapp/img/subaru.png' %}" alt="subaru"> </a>
                 <a href="{% url 'toyota' %}" id = "toyota"><img class="img" src="{% static 'markschoiceapp/img/toyota.png' %}" alt="toyota"> </a>
                 </div>

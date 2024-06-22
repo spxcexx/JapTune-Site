@@ -48,38 +48,44 @@
             </button>
           </div>
 
-        <div class="cards justify-content-center">
-            <a style='text-decoration: none;' href="{% url 'choice' %}">
-            <div class="card-main text-center">
-              <img src="{% static 'our_works/img/slide2.png' %}" width="780px">
-              <h4 style="color: #EDEDED;">Стокові машини</h4>
-              <p style="color: #EDEDED;">Бла бла бла крутые машины</p>
-            </div>
-          </a>
+          <div class="cards justify-content-center" style="height: 545px; width: 1450px;">
             <a style='text-decoration: none;' href="{% url 'choice' %}">
                 <div class="card-main text-center">
-                <img src="{% static 'our_works/img/slide1.png' %}" width="780px">
-                <h4 style="color: #EDEDED;">Тюнінговані машини</h4>
-                <p style="color: #EDEDED;">Бла бла бла крутые машины</p>
+                    <img src="{% static 'our_works/img/slide2.png' %}" alt="Стокові машини">
+                    <h4 class="mt-4">Стокові машини</h4>
+                    <p>Переглянути автопарк</p>
+                </div>
+            </a>
+            <a href="{% url 'partners' %}" style="text-decoration: none;">
+              <div class="card-main text-center" style="height: 506px; width: 710px;">
+                <h4 class="mb-5">Наші партнери</h4>
+                <div class="partner-logos">
+                  <a href="https://www.hks-power.co.jp/en/index.html"><img src="{% static 'partners/logo1.png' %}" alt="Partner 1" class="img-fluid" style="height: 65px; color: white;"></a>
+                  <a href="https://www.greddy.com"><img src="{% static 'partners/logo2.png' %}" alt="Partner 2" class="img-fluid" style="height: 65px; color: white;"></a>
+                  <a href="https://www.tein.com"><img src="{% static 'partners/logo3.png' %}" alt="Partner 3" class="img-fluid" style="height: 65px; color: white;"></a>
+                  <a href="https://www.cusco.co.jp/en/"><img src="{% static 'partners/logo4.png' %}" alt="Partner 4" class="img-fluid" style="height: 65px; color: white;"></a>
+                  <a href="https://bride-jp.com/en/"><img src="{% static 'partners/logo5.png' %}" alt="Partner 5" class="img-fluid" style="height: 65px; color: white;"></a>
+                </div>
+                <a href="{% url 'partners' %}"><button class="btn btn-secondary">Всі партнери</button></a>
             </div>
             </a>
         </div>
-
-        <div class="partners-card" style="height: 200px;">
-            <h1>Наші партнери</h1>
-            <div class="partners-logos">
-                <img src="{% static 'japtuneapp/img/partner1.png' %}" alt="Partner 1">
-                <img src="{% static 'japtuneapp/img/partner2.png' %}" alt="Partner 2">
-                <img src="{% static 'japtuneapp/img/partner3.png' %}" alt="Partner 3">
-                <img src="{% static 'japtuneapp/img/partner4.png' %}" alt="Partner 4">
-                <img src="{% static 'japtuneapp/img/partner5.png' %}" alt="Partner 5">
+        <div>
+          <div class="row justify-content-end mb-3">
+            <div class="col-md-8 mb-3" style="width: 560px;">
+                <div class="card-stats text-center p-4 " style="background-color: #333; border-radius: 10px; width: 500px; height: 330px; padding: 0;">
+                    <h4 class="mt-4" style="color: #dedede;">Чому саме ми?</h4>
+                    <p class="mt-5 p-2" style="color: #dedede; font-size: 1.2em;">
+                        > 5 років роботи з машинами<br>
+                        > 1760 вирішених проблем<br>
+                        > 5000 задоволених клієнтів<br>
+                        > 1000 професійних налаштувань<br>
+                        > 2000 успішних проектів
+                    </p>
+                </div>
             </div>
-            <a href="{% url 'partners' %}" class="button_partners">Всі партнери</a>
         </div>
-
-
-
-
+        </div>
 
     {% comment %}
     <footer>

@@ -1,13 +1,27 @@
 {% extends 'japtuneapp/base.html' %}
+{% load static %}
 {% block content %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Наша адреса</title>
+    <link rel="stylesheet" href="{% static 'our_adress/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'japtuneapp/bootstrap-5.3.3-dist/css/bootstrap.css' %}">
+    <script src="{% static 'registrationapp/js/script.js' %}" defer></script>
+    <script src="{% static 'registrationapp/js/jQuery.js' %}" defer></script>
+    <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
 </head>
 <body>
-
+    <main style="background-color: #2c2c2c;">
+        <iframe id = "map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2643.1941566953774!2d35.02860881163484!3d48.51034262501746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d959007e453abf%3A0x9fa67e6ef24022fb!2sJapTune!5e0!3m2!1sen!2sua!4v1719080851554!5m2!1sen!2sua" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="card-address text-center" style="background-color: #333; border-radius: 10px; height: 576px; margin-top: 46px;" id = "text">
+            <h4>Наша адреса: вулиця Солончакова 120</h4>
+            <h4>Як до нас приїхати: З вулиці Вітчизняної 67 повертаєте направо у ворота. Їдете по правій стороні та справа побачите будівлю у якій ми знаходимось.</h4>
+            <h4>Електрона пошта: japtune1@outlook.com</h4>
+            <h4>Номер телефону: +380637829811</h4>
+        </div>
+    </main>
 </body>
 {% endblock %}
 </html>

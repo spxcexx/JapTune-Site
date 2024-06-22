@@ -10,69 +10,128 @@
     <link rel="stylesheet" href="{% static 'honda/bootstrap-5.3.3-dist/css/bootstrap.css' %}">
     <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
     <title>Mazda</title>
+    <style>
+        *{
+            color: black;
+        }
+        body {
+            background-color: #2c2c2c;
+            font-family: Arial, sans-serif;
+        }
+        .car-card {
+            background-color: #ededed;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            margin: 20px 0;
+        }
+        .car-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .image-container {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        .car-details {
+            margin-left: 20px;
+            flex: 1;
+            text-align: center;
+        }
+        .car-details h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .car-details p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .checkbox-container input {
+            margin-right: 10px;
+        }
+        .btn-details {
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        .btn-details:hover {
+            background-color: #0056b3;
+        }
+        .additional-info {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+    </style>
 </head>
-<body style="background-color: #2C2C2C;">
-    <main class="d-flex flex-column align-items-center justify-content-center min-vh-100">
-        <div class="maintop text-center">
-            <img src="{% static 'markschoiceapp/img/mazda.png' %}" alt="hondalogo" class="hondalogo mb-3">
-            <h1 style="color: white; opacity: 83%;">Машини Honda</h1>
-        </div>
-        <div class="cars">
-            <div class="car1 card text-white mb-3" style="width: 1370px; height: 550px; background-color: #DEDEDE;">
-                <div class="cartop card-header d-flex justify-content-between align-items-center" style="background-color: #DEDEDE;">
-                    <img src="{% static 'honda/img/honda1.jpg' %}" alt="car" class="carimage mb-3" style="width: 100%; height: auto;">
-                    <div class="info1 text-center" style="flex: 1; margin-left: 15px;">
-                        <h5 class="card-title" style="color: black;">Honda NSX</h5>
-                        <p class="textinfo1" style="color: black;">Ціна: 140.000 €</p>
-                        <p class="textinfo1" style="color: black;">Вага: 1689 кг</p>
-                        <p class="textinfo1" style="color: black;">Потужність: 414 к.с.</p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="btncheck1">
-                            <label class="form-check-label" for="btncheck1" style="color: black;">З тюнінгом</label>
-                        </div>
-                        <div class="mt-3">
-                            <button type="button" class="btn btn-primary w-100">
-                                <a href="{% url 'detailsNSX' %}" style="text-decoration: none; color: white;">Детальніше</a>
-                            </button>
-                        </div>
-                        <button type="button" class="btn btn-primary"><a href="{% url 'detailsNSX' %}" style="text-decoration: none; color: white;">Детальніше</a></button>
-                    </div>
-                </div>
-                <div class="info2 card-body text-start">
-                    <p style="color: black;">Пробіг: 53.429 км</p>
-                    <p style="color: black;">Двигун: C30A</p>
-                    <p style="color: black;">Тип палива: бензин</p>
-                </div>
+<body>
+<div class="maintop text-center">
+    <img src="{% static 'markschoiceapp/img/honda.png' %}" alt="hondalogo" class="hondalogo mb-3">
+    <h1 style="color: white; opacity: 83%;">Машини Honda</h1>
+</div>
+<div class="container">
+    <div class="car-card">
+        <div class="image-container">
+            <img src="{% static 'honda/img/NSX.jpg' %}" alt="hondaNSX" class="img-fluid">
+            <div class="additional-info">
+                <p>Пробіг: 53.429 км</p>
+                <p>Двигун: C30A</p>
+                <p>Тип палива: бензин</p>
             </div>
         </div>
-        <div class="cars">
-            <div class="car1 card text-white mb-3" style="width: 1370px; height: 550px; background-color: #DEDEDE;">
-                <div class="cartop card-header d-flex justify-content-between align-items-center" style="background-color: #DEDEDE;">
-                    <img src="{% static 'honda/img/honda2.jpg' %}" alt="car" class="carimage mb-3" style="width: 100%; height: auto; ">
-                    <div class="info1 text-center" style="flex: 1; margin-left: 15px;">
-                        <h5 class="card-title" style="color: black;">Honda Integra Type R (1997)</h5>
-                        <p class="textinfo1" style="color: black;">Ціна: 140.000 €</p>
-                        <p class="textinfo1" style="color: black;">Вага: 1689 кг</p>
-                        <p class="textinfo1" style="color: black;">Потужність: 414 к.с.</p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="btncheck2">
-                            <label class="form-check-label" for="btncheck2" style="color: black;">З тюнінгом</label>
-                        </div>
-                        <div class="mt-3">
-                            <button type="button" class="btn btn-primary w-100">
-                                <a href="{% url 'detailsIntegra' %}" style="text-decoration: none; color: white;">Детальніше</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="info2 card-body text-start">
-                    <p style="color: black;">Пробіг: 231/455 км</p>
-                    <p style="color: black;">Двигун: B18C</p>
-                    <p style="color: black;">Тип палива: бензин</p>
-                </div>
+        <div class="car-details">
+            <h3>Honda NSX</h3>
+            <p>Ціна: 140.000 €</p>
+            <p>Вага: 1689 кг.</p>
+            <p>Потужн.: 414 к.с.</p>
+            <div class="checkbox-container">
+                <input type="checkbox" id="tuning">
+                <label for="tuning">З тюнінгом</label>
+            </div>
+            <button class="btn-details">
+                <a href="{% url 'detailsNSX' %}">Детальніше</a>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="car-card">
+        <div class="image-container">
+            <img src="{% static 'honda/img/Integra.jpg' %}" alt="hondaintegra" class="img-fluid">
+            <div class="additional-info">
+                <p>Пробіг: 231.455 км</p>
+                <p>Двигун: B18C</p>
+                <p>Тип палива: бензин</p>
             </div>
         </div>
-    </main>
+        <div class="car-details">
+            <h3>Honda Integra</h3>
+            <p>Ціна: 22.000 €</p>
+            <p>Вага: 1170 кг</p>
+            <p>Потужн.: 211 к.с.</p>
+            <div class="checkbox-container">
+                <input type="checkbox" id="tuning">
+                <label for="tuning">З тюнінгом</label>
+            </div>
+            <button class="btn-details">
+                <a href="{% url 'detailsIntegra' %}">Детальніше</a>
+            </button>
+        </div>
+    </div>
+</div>
+</main>
 </body>
 {% endblock %}
 </html>
