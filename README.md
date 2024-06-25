@@ -19,6 +19,11 @@
   - [show_successfull_login](#show_successful_login)
   - [logout_user](#logout_user)
 - [JavaScript](#javascript)
+  - [Скрипти у додатку для реєстрації та авторизації](#скрипти-у-додатку-для-реєстрації-та-авторизації)
+    - [Скрипт для відкриття та закриття модального вікна](#скрипт-для-відкриття-та-закриття-модального-вікна)
+    - [Скрипт для обробки кнопки реєстрації (#reg_btn)](#скрипт-для-обробки-кнопки-реєстрації-(#reg_btn))
+    - [Скрипт для обробки кнопки входу (#log_btn)](#скрипт-для-обробки-кнопки-входу-(#log_btn))
+    - [Загальний опис скриптів](#загальний-опис)
 
 ## Учасники проєкту
 
@@ -262,4 +267,68 @@ def logout_user(request):
 
 ## JavaScript
 
-some text will be added
+## Скрипти у додатку для реєстрації та авторизації
+
+### Скрипт для відкриття та закриття модального вікна
+
+```javascript
+const button = document.querySelector('#open-button');
+const popup = document.querySelector('#popup');
+const bg = document.querySelector("#bg");
+
+button.addEventListener('click', (event) => {
+    popup.classList.toggle('show');
+    bg.classList.toggle('show');
+});
+
+const closingModalElements = [bg];
+for (let el of closingModalElements) {
+    el.addEventListener('click', (event) => {
+        popup.classList.remove('show');
+        bg.classList.remove('show');
+    });
+}
+```
+
+- Цей скрипт додає функціональність для відкриття та закриття модального вікна при кліку на кнопку #open-button та фон (#bg). При кліку на кнопку #open-button, класи show додаються/видаляються у елементів popup та bg, щоб показати/приховати модальне вікно та фон відповідно. При кліку на фон (#bg), модальне вікно та фон закриваються.
+
+### Скрипт для обробки кнопки реєстрації (#reg_btn)
+
+```javascript
+const regBtn = document.querySelector("#reg_btn");
+const popup = document.querySelector('#popup');
+const bg = document.querySelector("#bg");
+
+popup.classList.toggle('active');
+bg.classList.toggle('active');
+
+bg.addEventListener('click', function(){
+    popup.classList.toggle('active');
+    bg.classList.toggle('active');
+});
+```
+
+- Цей скрипт відповідає за обробку кнопки реєстрації (#reg_btn). При кліку на цю кнопку, класи active додаються/видаляються у елементів popup та bg, що призводить до відкриття/закриття модального вікна та фону відповідно. Також передбачено закриття модального вікна при кліку на фон (#bg).
+
+### Скрипт для обробки кнопки входу (#log_btn)
+
+```javascript
+const logBtn = document.querySelector("#log_btn");
+const popup = document.querySelector('#popup');
+const bg = document.querySelector("#bg");
+
+popup.classList.toggle('active');
+bg.classList.toggle('active');
+
+bg.addEventListener('click', function(){
+    popup.classList.toggle('active');
+    bg.classList.toggle('active');
+});
+```
+
+- Цей скрипт реалізує функціональність кнопки входу (#log_btn). При кліку на кнопку, класи active додаються/видаляються у елементів popup та bg, що призводить до відкриття/закриття модального вікна та фону відповідно. Також оброблено закриття модального вікна при кліку на фон (#bg).
+
+
+### Загальний опис
+
+- Усі ці скрипти використовують функцію toggle для перемикання класів show або active, що є зручним способом керування видимістю та поведінкою модального вікна та фону на сторінці. Кожен з них реагує на кліки по конкретним елементам (#open-button, #reg_btn, #log_btn та #bg) і забезпечує відповідне відкриття або закриття модального вікна залежно від контексту.
