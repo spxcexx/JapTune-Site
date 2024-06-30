@@ -5503,6 +5503,10 @@ textarea.form-control-lg {
   outline: 0;
 }
 
+.modal.hide{
+  display: none;
+}
+
 .modal-dialog {
   position: relative;
   width: auto;

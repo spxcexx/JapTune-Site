@@ -9,14 +9,19 @@
     <script src="{% static 'japtuneapp/js/script.js' %}" defer></script>
     <link rel="stylesheet" href="{% static 'honda/bootstrap-5.3.3-dist/css/bootstrap.css' %}">
     <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
-    <title>Mazda</title>
+    <title>Honda</title>
     <style>
+
+
+
+
+
         *{
             color: black;
         }
         body {
             background-color: #2c2c2c;
-            font-family: Arial, sans-serif;
+            font-family: "K2D", sans-serif;
         }
         .car-card {
             background-color: #ededed;
@@ -96,12 +101,8 @@
             <p>Ціна: 140.000 €</p>
             <p>Вага: 1689 кг.</p>
             <p>Потужн.: 414 к.с.</p>
-            <div class="checkbox-container">
-                <input type="checkbox" id="tuning">
-                <label for="tuning">З тюнінгом</label>
-            </div>
             <button class="btn-details">
-                <a href="{% url 'detailsNSX' %}">Детальніше</a>
+                <a href="{% url 'detailsNSX' %}" style="text-decoration: none; color: white;">Детальніше</a>
             </button>
         </div>
     </div>
@@ -121,12 +122,8 @@
             <p>Ціна: 22.000 €</p>
             <p>Вага: 1170 кг</p>
             <p>Потужн.: 211 к.с.</p>
-            <div class="checkbox-container">
-                <input type="checkbox" id="tuning">
-                <label for="tuning">З тюнінгом</label>
-            </div>
             <button class="btn-details">
-                <a href="{% url 'detailsIntegra' %}">Детальніше</a>
+                <a href="{% url 'detailsIntegra' %}" style="color: white; text-decoration: none;">Детальніше</a>
             </button>
         </div>
     </div>

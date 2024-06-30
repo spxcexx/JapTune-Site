@@ -21,11 +21,10 @@ def contact_us_view(request):
                 fail_silently=False,
 
             )
-            return HttpResponseRedirect('/success/')
+            return render(request, 'japtuneapp/index.html', {'form': form})
+
     else:
         form = ContactForm()
     return render(request, 'contact_us/index.html', {'form': form})
 
-def success_view(request):
-    return render(request, 'contact_us/success.html')
 

@@ -26,11 +26,11 @@ from nissan.views import *
 from mazda.views import *
 from honda.views import *
 from about_us.views import about_us_view
-from contact_us.views import contact_us_view, success_view
-from excursions.views import excursions_view, success_excursions_view
+from contact_us.views import contact_us_view
+from excursions.views import excursions_view
 from our_address.views import our_address_view
 from our_works.views import our_works_view
-from vacancies.views import vacancies_view
+from vacancies.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -43,8 +43,12 @@ urlpatterns = [
     path('successful_login/', show_successful_login, name='successful_login'),
     path('toyota/', toyota_view, name = "toyota"),
     path('subaru/', subaru_view, name = "subaru"),
+    path('brz/', brz_view, name = "brz"),
+    path('impreza/', impreza_view, name = "impreza"),
     path('nissan/', nissan_view, name = "nissan"),
     path('mazda/', mazda_view, name = "mazda"),
+    path('rx-7/', rx_7_view, name = "rx-7"),
+    path('mx-5/', mx_5_view, name = "mx-5"),
     path('honda/', honda_view, name = "honda"),
     path('about_us/', about_us_view, name = 'about_us'),
     path('contact_us/', contact_us_view, name = 'contact_us'),
@@ -52,12 +56,16 @@ urlpatterns = [
     path('our_address/', our_address_view, name = 'our_address'),
     path('our_works/', our_works_view, name = 'our_works'),
     path('vacancies/', vacancies_view, name = 'vacancies'),
-    path('success/', success_view, name='success'),
-    path('success_excursion/', success_excursions_view, name = 'success_excursion'),
     path('detailsIntegra/', detailsIntegra_view, name = 'detailsIntegra'),
     path('detailsSkyline/', detailsSkyline_view, name = 'detailsSkyline'),
     path('detailsSilvia/', detailsSilvia_view, name = 'detailsSilvia'),
     path('detailsNSX/', detailsNSX_view, name = "detailsNSX"),
     path('detailsSupra', detailsSupra_view, name = "detailsSupra"),
     path('detailsTrueno', detailsTrueno_view, name = "detailsTrueno"),
+    path('administrator/', administrator_view, name = 'administrator'),
+    path('cleaner/', cleaner_view, name = 'cleaner'),
+    path('mechanic/', mechanic_view, name = 'mechanic'),
+    path('mechanics_helper/', mechanics_helper_view, name = 'mechanics_helper'),
+    path('supply_manager/', supply_manager_view, name = 'supply_manager'),
+    path('tire_mechanic/', tire_mechanic_view, name = 'tire_mechanic'),
 ]

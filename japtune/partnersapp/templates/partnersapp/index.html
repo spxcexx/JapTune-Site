@@ -5,44 +5,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'honda/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'partnersapp/css/style.css' %}">
     <script src="{% static 'japtuneapp/js/script.js' %}" defer></script>
     <link rel="stylesheet" href="{% static 'honda/bootstrap-5.3.3-dist/css/bootstrap.css' %}">
     <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
     <title>Mazda</title>
 </head>
 <body>
-    <main style="background-color: 2c2c2c;">
-        <div class="row col-12 mt-5 mb-5">
-            <div class="container col-2">
-                <div>
-                    <img src="{% static 'partnersapp/img/.png' %}" alt="toyotires">
-                </div>
+    <style>
+        body {
+            font-family: "K2D", sans-serif;
+        }
+        main {
+            background-color: #2c2c2c;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #partners_list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Adjust the gap as needed */
+            margin-top: 20px;
+        }
+        #partners_list div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; /* Adjust width as needed */
+            max-width: 200px; /* Adjust the max-width as needed */
+        }
+        #partners_list img {
+            width: 100%; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+    <main>
+        <div>
+            <h1 style="color: white;">Наші партнери</h1>
+        </div>
+        <div id="partners_list">
+            <div>
+                <a href="https://www.toyotires.com" style="width: 50%;"><img src="{% static 'japtuneapp/img/toyotires.png' %}" alt="toyotires" id="partner" style="width: 140%;"></a>
             </div>
-            <div class="container col-2">
-                <div>
-                    <a href=""><img src="{% static 'partnersapp/img/mahle.png' %}" alt="mahle"></a>
-                </div>
+            <div>
+                <a href="https://www.hks-power.co.jp/en/index.html" style="width: 60%;"><img src="{% static 'japtuneapp/img/hks.png' %}" alt="hks" id="partner"></a>
             </div>
-            <div class="container col-2">
-                <div>
-                    <img src="{% static 'partnersapp/img/motul.png' %}" alt="motul">
-                </div>
+            <div>
+                <a href="https://bride-jp.com/en/"><img src="{% static 'japtuneapp/img/bride.png' %}" alt="bride" id="partner" style="width: 70%;"></a>
             </div>
-            <div class="container col-2">
-                <div>
-                    <img src="{% static 'partnersapp/img/hks.png' %}" alt="hks">
-                </div>
+            <div>
+                <a href="https://www.cusco.co.jp/en/"><img src="{% static 'japtuneapp/img/cusco.png' %}" alt="cusco" id="partner"></a>
             </div>
-            <div class="container col-2">
-                <div>
-                    <img src="{% static 'partnersapp/img/nos.png' %}" alt="nos">
-                </div>
+            <div>
+                <a href="https://www.sparco-official.com/en/"><img src="{% static 'japtuneapp/img/sparco.png' %}" alt="sparco" id="partner"></a>
             </div>
-            <div class="container col-2">
-                <div>
-                    <img src="{% static 'partnersapp/img/ngk.png' %}" alt="ngk">
-                </div>
+            <div>
+                <a href="https://www.tein.com"><img src="{% static 'japtuneapp/img/tein.webp' %}" alt="tein" id="partner"></a>
+            </div>
+            <div>
+                <a href="https://www.greddy.com"><img src="{% static 'japtuneapp/img/greddy.png' %}" alt="greddy" id="partner"></a>
+            </div>
+            <div>
+                <a href="https://www.mishimoto.com"><img src="{% static 'partnersapp/img/mishimoto.png' %}" alt="mishimoto" id="partner"></a>
+            </div>
+            <div>
+                <a href="https://www.falkentire.com"><img src="{% static 'partnersapp/img/falken.png' %}" alt="falken" id="partner"></a>
+            </div>
+            <div>
+                <a href="https://www.brembo.com"><img src="{% static 'partnersapp/img/brembo.svg' %}" alt="brembo" id="partner"></a>
+            </div>
+            <div>
+                <a href="https://www.ssr-wheels.com"><img src="{% static 'partnersapp/img/ssr.png' %}" alt="ssr" id="partner"></a>
+            </div>
+            <div>
+                <a href="https://www.enkei.com"><img src="{% static 'partnersapp/img/enkei.png' %}" alt="enkei" id="partner"></a>
             </div>
         </div>
     </main>

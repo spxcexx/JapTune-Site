@@ -8,8 +8,20 @@
     <script src="{% static 'japtuneapp/js/script.js' %}" defer></script>
     <link rel="stylesheet" href="{% static 'japtuneapp/bootstrap-5.3.3-dist/css/bootstrap.css' %}">
     <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
 </head>
 <body>
+<style>
+
+
+    body {
+      font-family: "K2D", sans-serif;
+
+    }
+    </style>
     <header style="height: 65px;">
         <div class="container">
             <div id = "links" class="row">
@@ -33,12 +45,16 @@
                 </div>
 
                 <div class="col-1 mt-2 align-items-center">
-                    <img src="{% static 'japtuneapp/img/imgregistration.png' %}" id="login_img" alt="" height="40px">
-                </div>
-
-                <div class="col-1 mt-2 " >
                     {% if user.is_authenticated %}
-                        <a style="text-align: center; font-size: 30px; padding-top: 13px; font-size: 24;" href="{% url 'logout_user' %}">{{ user.username }}</a>
+                        <a href="{% url 'logout_user' %}"><img src="{% static 'japtuneapp/img/logout.png' %}" id="login_img" alt="" height="40px"></a>
+                    {% else %}
+                        <img src="{% static 'japtuneapp/img/imgregistration.png' %}" id="login_img" alt="" height="40px">
+                    {% endif %}
+                    </div>
+
+                <div class="col-1 mt-2 align-items-center" >
+                    {% if user.is_authenticated %}
+                        <a style="text-align: center; font-size: 30px; font-size: 24;" href="{% url 'logout_user' %}">{{ user.username }}</a>
                     {% else %}
                         <a href="{% url 'login' %}" style="margin-right:100px; font-size: 24;">Увійти</a>
                     {% endif %}
@@ -57,12 +73,12 @@
             <a href="https://x.com/JapTune"><img src="{% static 'japtuneapp/img/twitterfooter.png' %}" alt=""></a>
             <a href="https://www.linkedin.com/in/japtune-corp-93b45b310/"><img src="{% static 'japtuneapp/img/linkedinfooter.png' %}" alt=""></a>
         </div>
-        <div id = "footer_1">
+        <div id = "footer_1" class="mt-2">
             <a href="{% url 'excursions' %}">Екскурсії</a>
             <a href="{% url 'vacancies' %}">Шукаємо спеціалістів</a>
             <a href="{% url 'our_works' %}">Наші роботи</a>
         </div>
-        <div id = "footer_2">
+        <div id = "footer_2" class="mt-2">
             <a href="{% url 'partners' %}">Наші партнери</a>
             <a href="{% url 'our_address' %}">Наша адреса</a>
             <a href="{% url 'contact_us' %}">Зв'язок з нами</a>

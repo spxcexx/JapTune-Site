@@ -17,7 +17,7 @@
 
         body {
             background-color: #2c2c2c;
-            font-family: Arial, sans-serif;
+            font-family: "K2D", sans-serif;
         }
         .car-card {
             background-color: #ededed;
@@ -93,16 +93,13 @@
                     </div>
                 </div>
                 <div class="car-details">
-                    <h3>Nissan SkyLine R34</h3>
-                    <p>Ціна: 12.000 €</p>
-                    <p>Вага: 1050 кг</p>
-                    <p>Потужн.: 181 к.с.</p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" id="tuning">
-                        <label for="tuning">З тюнінгом</label>
-                    </div>
+                    <h3>Mazda RX-7</h3>
+                    <p>Ціна: 22.000 €</p>
+                    <p>Вага: 1170 кг</p>
+                    <p>Потужн.: 211 к.с.</p>
+
                     <button class="btn-details">
-                        <a href="{% url 'detailsSkyline' %}">Детальніше</a>
+                        <a href="{% url 'rx-7' %}" style="text-decoration: none; color: white;">Детальніше</a>
                     </button>
                 </div>
             </div>
@@ -112,22 +109,19 @@
                 <div class="image-container">
                     <img src="{% static 'mazda/img/mazdamx1.png' %}" alt="Nissan SkyLine R34" class="img-fluid">
                     <div class="additional-info">
-                        <p>Пробіг: 569.311 км</p>
-                        <p>Двигун: FB20D</p>
+                        <p>Пробіг: 169.205 км</p>
+                        <p>Двигун: 13B-REW</p>
                         <p>Тип палива: бензин</p>
                     </div>
                 </div>
                 <div class="car-details">
-                    <h3>Nissan Silvia S15</h3>
+                    <h3>Mazda MX-5</h3>
                     <p>Ціна: 12.000 €</p>
                     <p>Вага: 1050 кг.</p>
                     <p>Потужн.: 181 к.с.</p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" id="tuning">
-                        <label for="tuning">З тюнінгом</label>
-                    </div>
+
                     <button class="btn-details">
-                        <a href="{% url 'detailsSilvia' %}">Детальніше</a>
+                        <a href="{% url 'mx-5' %}" style="text-decoration: none; color: white;">Детальніше</a>
                     </button>
                 </div>
             </div>

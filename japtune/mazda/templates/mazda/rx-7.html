@@ -1,0 +1,107 @@
+{% extends 'japtuneapp/base.html' %}
+{% block content %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'honda/css/style.css' %}">
+    <script src="{% static 'honda/js/detailsNSX.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'honda/bootstrap-5.3.3-dist/css/bootstrap.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Details</title>
+</head>
+<body style="background-color:#2C2C2C;">
+  <style>
+    body {
+  font-family: "K2D", sans-serif;
+
+}
+</style>
+  <div class="container main_d">
+
+    <div class="row">
+
+        <h1 style="color: white;">Mazda RX-7 - 22.000 €</h1>
+
+    </div>
+
+      <div class="row">
+
+
+        <div class="col">
+          <img src="{% static 'mazda/img/mazdarx1.png' %}" alt="" width="600">
+        </div>
+
+
+        <div class="col" style="color: white;">
+          <h1>Характеристики:</h1>
+        <h3>Довжина: 4285 мм</h3>
+        <h3>Ширина: 1760 мм</h3>
+        <h3>Висота: 1230 мм </h3>
+        <h3>Маса: 1170 кг</h3>
+        <h3>Об'єм баку: 76 л</h3>
+        <h3>Максимальна швидкість: 256 км/год</h3>
+        <h3>Розгін від 0 до 100: 4.8 с</h3>
+        </div>
+
+
+
+      </div>
+    <div class="row align-items-end">
+
+    <div class="col">
+<button type="button" id="button-create" class="btn btn-secondary btn-block btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Створити замовлення
+  </button>
+</div>
+</div>
+
+</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Створення замовлення</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="" method="POST">
+            {% csrf_token %}
+            <p>Ваше ім'я</p>
+            <input type="text" name="name">
+            <p>Ваша електронна пошта</p>
+            <input type="text" name="email">
+            <p>Ваш номер телефону</p>
+            <input type="text" name="phone" required>
+            <p>Тюнінг:</p>
+            <div>
+              <input type="radio" id="with_tune" name="tuning" value="з тюнінгом" required>
+              <label for="with_tune">З тюнінгом</label>
+              <input type="radio" id="without_tune" name="tuning" value="без тюнінгу" required>
+              <label for="without_tune">Без тюнінгу</label>
+            </div>
+
+        </div>
+        <div class="modal-footer align-items-start">
+          <button type="submit" class="btn btn-primary button_send">Створити замовлення</button>
+        </div>
+        </form>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}
+
+
+
+
+
+

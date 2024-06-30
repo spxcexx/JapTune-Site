@@ -20,7 +20,7 @@ def registration(request):
                 print("Спроба створити юзера")
                 User.objects.create_user(first_name=first_name, last_name=last_name ,email=email, username=username, password=password)
                 print("Користувача створено")
-                return redirect('login_user')
+                return redirect('login')
             except IntegrityError:
                 print("Користувач існує")
                 text_error = "Такий користувач вже існує"
@@ -58,7 +58,7 @@ def show_successful_login(request):
     if request.user.is_authenticated:
         return render(request, "japtuneapp/index.html")
     else:
-        return redirect("login_user")
+        return redirect("login")
 
 def logout_user(request):
     logout(request)

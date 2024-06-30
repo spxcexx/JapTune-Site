@@ -13,7 +13,12 @@
     <script src="{% static 'japtuneapp/js/jquery-3.7.1.min.js' %}" defer></script>
 </head>
 <body style="background-color: 2c2c2c;">
+    <style>
+        body {
+      font-family: "K2D", sans-serif;
 
+    }
+    </style>
   <div class="main_div container my-5" style="background-color: 2c2c2c;">
         <div class="row">
             <h2 class="text-center mb-5" id="vacancies-name">Вакансії</h2>
@@ -23,21 +28,21 @@
             <div class="col" id = "card">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px;">Автомеханік</h5>
-                        <p class="card-text" style="font-size: 20px; font-weight: bolder;">20 000 – 30 000 грн</p>
+                        <h5 class="card-title">Автомеханік</h5>
+                        <p class="card-text" id = "salary">20 000 – 30 000 грн</p>
                         <p class="card-text">Повна зайнятість. Також готові взяти студента.
                             Вимоги: Досвід роботи авто механіком від 1 року Знання основ діагностики та ремонту автомобілів Вміння працювати з діагностичним обладнанням</p>
-                        <a href="#" class="btn btn-primary">Відгукнутися</a>
+                        <a href="{% url 'mechanic' %}" class="btn btn-primary">Відгукнутися</a>
                     </div>
                 </div>
             </div>
             <div class="col" id = "card">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px;">Адміністратор</h5>
-                        <p class="card-text" style="font-size: 20px; font-weight: bolder;">10 000 – 15 000 грн</p>
+                        <h5 class="card-title">Адміністратор</h5>
+                        <p class="card-text" id = "salary">10 000 – 15 000 грн</p>
                         <p class="card-text">Повна зайнятість. Також готові взяти студента. Вимоги: Комунікабельність та вміння працювати в колективі; Відповідальність та організованість; Бажання навчатися та розвиватися.</p>
-                        <a href="#" class="btn btn-primary">Відгукнутися</a>
+                        <a href="{% url 'administrator' %}" class="btn btn-primary">Відгукнутися</a>
                     </div>
                 </div>
             </div>
@@ -46,20 +51,20 @@
             <div class="col" id = "card">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px;">Шиномонтажник</h5>
-                        <p class="card-text" style="font-size: 20px; font-weight: bolder;">14 000 – 30 000 грн</p>
+                        <h5 class="card-title">Шиномонтажник</h5>
+                        <p class="card-text" id = "salary">14 000 – 30 000 грн</p>
                         <p class="card-text">Повна зайнятість. Вимоги: Досвід на роботи на вантажному та легковому шиномонтажі, вміння робити ремонт покришок, вміння користування шиномонтажним обладнанням.</p>
-                        <a href="#" class="btn btn-primary">Відгукнутися</a>
+                        <a href="{% url 'tire_mechanic' %}" class="btn btn-primary">Відгукнутися</a>
                     </div>
                 </div>
             </div>
             <div class="col" id = "card">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px;">Помічник автомеханіка</h5>
-                        <p class="card-text" style="font-size: 20px; font-weight: bolder;">8 000 – 12 000 грн</p>
+                        <h5 class="card-title">Помічник автомеханіка</h5>
+                        <p class="card-text" id = "salary">8 000 – 12 000 грн</p>
                         <p class="card-text">Повна зайнятість. Також готові взяти студента, інваліда, ветерана. Без досвіду. Вимоги: Бажання навчатись професії Відповідальність Базові знання пристрою</p>
-                        <a href="#" class="btn btn-primary">Відгукнутися</a>
+                        <a href="{% url 'mechanics_helper' %}" class="btn btn-primary">Відгукнутися</a>
                     </div>
                 </div>
             </div>
@@ -68,20 +73,20 @@
             <div class="col" id = "card">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px;">Прибиральник</h5>
-                        <p class="card-text" style="font-size: 20px; font-weight: bolder;">6 000 – 9 000 грн</p>
+                        <h5 class="card-title">Прибиральник</h5>
+                        <p class="card-text" id = "salary">6 000 – 9 000 грн</p>
                         <p class="card-text">Повна зайнятість. Досвід роботи від 1 року. Умови роботи: Позмінний графік Забезпечення всім необхідним для роботи. Обов’язки: Якісне прибирання ремонтної зони</p>
-                        <a href="#" class="btn btn-primary">Відгукнутися</a>
+                        <a href="{% url 'cleaner' %}" class="btn btn-primary">Відгукнутися</a>
                     </div>
                 </div>
             </div>
             <div class="col" id = "card">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px;">Менеджер з постачання</h5>
-                        <p class="card-text" style="font-size: 20px; font-weight: bolder;">20 000 – 25 000 грн</p>
+                        <h5 class="card-title">Менеджер з постачання</h5>
+                        <p class="card-text" id = "salary">20 000 – 25 000 грн</p>
                         <p class="card-text">Повна зайнятість. Досвід роботи від 1 року. Вимоги: Вміння активно просувати продукцію та проводити переговори з клієнтами Висока комунікабельність та навички роботи з клієнтами.</p>
-                        <a href="#" class="btn btn-primary">Відгукнутися</a>
+                        <a href="{% url 'supply_manager' %}" class="btn btn-primary">Відгукнутися</a>
                     </div>
                 </div>
             </div>

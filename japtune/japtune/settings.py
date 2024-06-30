@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-import environ
+# import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'about_us',
     'our_address',
     'excursions',
+    'dbbackup',
 ]
 
 MIDDLEWARE = [
@@ -92,8 +93,12 @@ WSGI_APPLICATION = 'japtune.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mydatabase',
+        'PORT': '3306',
+        'HOST': '127.0.0.1',
+        'PASSWORD': 'forxvxr2009DANIL',
+        'USER': 'spxce'
     }
 }
 
@@ -152,12 +157,12 @@ if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
-env = environ.Env()
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+# env = environ.Env()
+# environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
-EMAIL_BACKEND = env('EMAIL_BACKEND')
-EMAIL_HOST = env('EMAIL_HOST')
-EMAIL_PORT = env('EMAIL_PORT')
-EMAIL_USE_TLS = env('EMAIL_USE_TLS')
-EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+# EMAIL_BACKEND = env('EMAIL_BACKEND')
+# EMAIL_HOST = env('EMAIL_HOST')
+# EMAIL_PORT = env('EMAIL_PORT')
+# EMAIL_USE_TLS = env('EMAIL_USE_TLS')
+# EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')

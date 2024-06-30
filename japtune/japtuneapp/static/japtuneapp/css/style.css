@@ -1,8 +1,13 @@
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
+
+
 
 header{
     display: flex;
@@ -13,7 +18,6 @@ header{
     border-bottom: 0.1em solid;
     border-color: white ;
 }
-
 
 header a{
     display: flex;
@@ -37,8 +41,6 @@ header img{
     display: flex;
     align-items: center;
     justify-content: center;
-
-
 }
 
 body main h1 {
@@ -53,15 +55,8 @@ body main h1 {
 
 .cards{
     display: flex;
-
     flex-direction: row;
-    /* padding: ;
-    gap: ; */
 }
-/*
-.card-main{
-padding:;
-} */
 
 body main{
     font-weight: bold;
@@ -80,7 +75,6 @@ body main{
     background: url('{% static "japtuneapp/img/bg.jpg" %}') center, center/over, no-repeat;
     background-size: cover;
     background-repeat: no-repeat;
-
 }
 
 .button{
@@ -92,7 +86,6 @@ body main{
     border: 1px solid white;
     font-size: 20px;
     transition: all 0.3s ease;
-
 }
 
 
@@ -455,4 +448,69 @@ body main #buttons .main-but .button {
 
 .button_partners:hover {
     background-color: #014890;
+}
+
+body {
+    background-color: #2C2C2C;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-main {
+    background-color: #333;
+    border-radius: 10px;
+    width: 95%;
+    color: #dedede;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+}
+
+.partner-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.map-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card-map, .card-stats {
+    background-color: #333;
+    border-radius: 10px;
+    color: #dedede;
+    margin: 10px;
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+
+}
+
+.card-equal-height {
+    height: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title,
+.card-text {
+    color: #dedede;
+}
+
+.card-stats {
+    width: 70%;
 }
