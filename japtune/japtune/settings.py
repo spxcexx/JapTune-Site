@@ -54,7 +54,6 @@ INSTALLED_APPS = [
     'about_us',
     'our_address',
     'excursions',
-    'dbbackup',
 ]
 
 MIDDLEWARE = [
